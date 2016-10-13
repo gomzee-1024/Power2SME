@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/page_right_padding"
+    android:layout_marginLeft="@dimen/page_right_padding">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/page_top_padding"
+        >
+
+        <TextView
+            style="@style/p2s_36_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SME ID : "
+            />
+
+        <TextView
+            android:id="@+id/TextView_smeId"
+            style="@style/p2s_36_orange_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_weight="1"
+            />
+        <View
+            android:layout_width="1dip"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/page_top_padding"
+        >
+
+        <TextView
+            style="@style/p2s_46_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Company : "
+            />
+
+        <TextView
+            android:id="@+id/TextView_companyName"
+            style="@style/p2s_46_gray_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/page_top_padding"
+        android:layout_marginBottom="@dimen/page_top_padding"
+        android:gravity="bottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                >
+                <TextView
+                    style="@style/p2s_36_black_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email : "
+                    />
+
+                <TextView
+                    android:id="@+id/TextView_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/p2s_36_gray_normal"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text=""
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/page_top_padding"
+                >
+                <TextView
+                    style="@style/p2s_36_black_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone : "
+                    />
+
+                <TextView
+                    android:id="@+id/TextView_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/p2s_36_gray_normal"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text=""
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/Button_actOnBehalf"
+            android:layout_width="wrap_content"
+            android:layout_height="35dip"
+            style="@style/p2s_btn_30_blue_white"
+            android:text="ACT ON BEHALF"
+            />
+    </LinearLayout>
+</LinearLayout>

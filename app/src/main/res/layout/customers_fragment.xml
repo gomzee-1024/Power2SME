@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main_rfal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/LinearLayout_topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/rfq_link_color"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:layout_alignParentTop="true"
+        >
+
+        <TextView
+            android:id="@+id/TextView_transactedCustomersLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            style="@style/Style_TextView_body1"
+            android:textColor="@color/white"
+            />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/TextView_displayedResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            style="@style/Style_TextView_body1"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+
+    <com.malinskiy.superrecyclerview.SuperRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ListView_customersList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:recyclerClipToPadding="false"
+        app:layout_empty="@layout/customer_selection_empty_layout"
+        app:layout_moreProgress="@layout/load_more_footer"
+        app:scrollbarStyle="outsideOverlay"
+        android:layout_below="@+id/LinearLayout_topPanel"
+        android:background="@color/white"
+        >
+    </com.malinskiy.superrecyclerview.SuperRecyclerView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        fab:menu_icon="@drawable/fab_search"
+        fab:menu_animationDelayPerItem="0"
+        fab:menu_colorNormal="@color/p2s_orange"
+        fab:menu_colorPressed="@color/p2s_orange"
+        fab:menu_colorRipple="@color/p2s_orange"
+        fab:menu_labels_maxLines="2"
+        fab:menu_labels_ellipsize="end"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        fab:menu_backgroundColor="#ccffffff"
+        >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fab_email"
+            fab:fab_label="Email"
+            fab:fab_size="mini"
+            fab:fab_colorRipple="@color/colorAccent"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccent"
+            android:visibility="gone"
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_mobileNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fab_phone"
+            fab:fab_label="Mobile No."
+            fab:fab_size="mini"
+            fab:fab_colorRipple="@color/colorAccent"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccent"
+            android:visibility="gone"
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_smeId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fab_sme"
+            fab:fab_label="SME ID"
+            fab:fab_size="mini"
+            fab:fab_colorRipple="@color/colorAccent"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccent"
+            android:visibility="gone"
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fab_company"
+            fab:fab_label="Company Name"
+            fab:fab_size="mini"
+            fab:fab_colorRipple="@color/colorAccent"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccent"
+            android:visibility="gone"
+             />
+
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

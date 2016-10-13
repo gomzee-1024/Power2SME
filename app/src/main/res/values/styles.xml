@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Style_Spinner">
+        <item name="android:textColor">@color/primary87</item>
+    </style>
+
+    <style name="Style_EditText">
+        <item name="android:textColor">@color/primary87</item>
+        <item name="android:textColorHint">@color/primary54</item>
+        <item name="android:textSize">@dimen/subhead1</item>
+    </style>
+    <style name="Style_EditText_login_signup">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/primary54</item>
+        <item name="android:textSize">@dimen/subhead1</item>
+    </style>
+
+    <style name="Style_EditText_search_myorders">
+        <item name="android:height">40dip</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/primary54</item>
+        <item name="android:textSize">@dimen/subhead1</item>
+        <item name="android:background">@drawable/edittext_white_rounded_corner</item>
+
+    </style>
+
+    <style name="Style_SearchImageButtonLayout">
+        <item name="android:height">40dip</item>
+        <item name="android:background">@drawable/search_image_button_background</item>
+
+    </style>
+
+    <!-- Buttons -->
+
+    <style name="Style_Button_SquareYellow">
+        <item name="android:textColor">@color/yellow_button_text</item>
+        <item name="android:background">@drawable/button_yellow_bg</item>
+        <item name="android:textSize">@dimen/button</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <!--<item name="android:layout_marginLeft">@dimen/page_left_padding</item>
+        <item name="android:layout_marginRight">@dimen/page_right_padding</item>-->
+        <item name="android:layout_height">40dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="Style_login_checkboxes">
+        <item name="android:text">Remember Password</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:button">@drawable/login_fragment_checkbox</item>
+    </style>
+
+    <style name="Style_Button_SquareBlueLight">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/button_basic_blue_rounded_corners</item>
+        <item name="android:textSize">@dimen/button</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">35dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="Style_Button_SquareGrayLight">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/button_basic_gray_rounded_corners</item>
+        <item name="android:textSize">@dimen/button</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">35dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="Style_Button_Square_transparent">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/button_transparent_border_white</item>
+        <item name="android:textSize">@dimen/button</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">35dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Style_Button_SquareGray">
+        <item name="android:textColor">@color/white_button_text</item>
+        <item name="android:background">@drawable/button_gray_bg</item>
+        <item name="android:textSize">@dimen/button</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="FacebookLoginButton">
+        <item name="android:background">@drawable/fb_signin_button</item>
+        <item name ="android:scaleType">centerInside</item>
+    </style>
+    <style name="Style_Button_topHeadTab_Selected">
+        <item name="android:textColor">@color/accent1</item>
+        <item name="android:background">@drawable/border_bottom_selected</item>
+        <item name="android:textSize">@dimen/button</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_height">40dip</item>
+    </style>
+    <style name="Style_Button_topHeadTab_Unselected">
+        <item name="android:textColor">@color/dividers</item>
+        <item name="android:background">@drawable/border_bottom_unselected</item>
+        <item name="android:textSize">@dimen/button</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_height">40dip</item>
+    </style>
+    <!-- TextView -->
+
+    <style name="Style_TextView_menu">
+        <item name="android:textColor">@color/primary87</item>
+        <item name="android:textSize">@dimen/menu</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="Style_TextView_caption">
+        <item name="android:textColor">@color/primary54</item>
+        <item name="android:textSize">@dimen/caption</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="Style_TextView_body1">
+        <item name="android:textColor">@color/primary87</item>
+        <item name="android:textSize">@dimen/body1</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="Style_TextView_body1_WhiteTextColor">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/body1</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="Style_TextView_body1_accent1" parent="Style_TextView_body1">
+        <item name="android:textColor">@color/accent1</item>
+    </style>
+
+    <style name="Style_TextView_body1_accent2" parent="Style_TextView_body1">
+        <item name="android:textColor">@color/accent2</item>
+    </style>
+
+    <style name="Style_TextView_body1_accent3" parent="Style_TextView_body1">
+        <item name="android:textColor">@color/accent3</item>
+    </style>
+
+    <style name="Style_TextView_body1_light" parent="Style_TextView_body1">
+        <item name="android:textColor">@color/body1_light</item>
+    </style>
+
+    <style name="Style_TextView_body2">
+        <item name="android:textColor">@color/primary87</item>
+        <item name="android:textSize">@dimen/body2</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="Style_TextView_Subhead1">
+        <item name="android:textColor">@color/primary87</item>
+        <item name="android:textSize">@dimen/subhead1</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Style_TextView_Subhead1_accent1">
+        <item name="android:textColor">@color/accent1</item>
+        <item name="android:textSize">@dimen/subhead1</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Style_TextView_Subhead2">
+        <item name="android:textColor">@color/primary87</item>
+        <item name="android:textSize">@dimen/subhead1</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Style_TextView_title">
+        <item name="android:textColor">@color/primary87</item>
+        <item name="android:textSize">@dimen/title</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="Style_TextView_headline">
+        <item name="android:textColor">@color/primary87</item>
+        <item name="android:textSize">@dimen/headline</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="Style_TextView_Dialog_title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/headline</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>    </style>
+
+
+    <!-- Bullets and Dividers -->
+    <style name="Style_View_divider">
+        <item name="android:background">@color/dividers</item>
+        <item name="android:height">1dip</item>
+    </style>
+    <style name="Style_View_sectionDivider">
+        <item name="android:background">@color/section_dividers</item>
+        <item name="android:height">1dip</item>
+    </style>
+    <style name="Style_ImageView_listItemBullets">
+        <item name="android:src">@drawable/small_double_arrow</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+    </style>
+
+    <style name="Style_TextView_display1">
+        <item name="android:textColor">@color/primary54</item>
+        <item name="android:textSize">@dimen/display1</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="Style_TextView_display2">
+        <item name="android:textColor">@color/primary54</item>
+        <item name="android:textSize">@dimen/display2</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="Style_TextView_display3">
+        <item name="android:textColor">@color/primary54</item>
+        <item name="android:textSize">@dimen/display3</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="Style_TextView_display4">
+        <item name="android:textColor">@color/primary54</item>
+        <item name="android:textSize">@dimen/display4</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="Style_TextView_shipment_Status">
+        <item name="android:textColor">@color/primary87</item>
+        <item name="android:textSize">@dimen/shipment_Status</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="Style_TextView_searchBar">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/body_second_level_text_size</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">@drawable/rounded_corner_searchbar_edittext_bg</item>
+    </style>
+    <style name="Style_ProgressBar">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_bar</item>
+    </style>
+
+    <!-- ACTION BAR -->
+
+
+    <style name="TrasparentActionBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <!-- Dialog styles -->
+    <style name="DialogTheme">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowTitleStyle">@style/DialogTitleStyle</item>
+    </style>
+
+    <style name ="DialogTitleStyle">
+        <item name="android:windowBackground">@color/NewBlue</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <!-- ################################## -->
+
+    <style name="p2s_36_black_bold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/p2s_36px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="p2s_36_orange_normal">
+        <item name="android:textColor">@color/p2s_orange</item>
+        <item name="android:textSize">@dimen/p2s_36px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="p2s_46_black_bold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/p2s_46px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="p2s_46_gray_bold">
+        <item name="android:textColor">@color/rfq_link_color</item>
+        <item name="android:textSize">@dimen/p2s_46px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="p2s_46_gray_normal">
+        <item name="android:textColor">@color/rfq_link_color</item>
+        <item name="android:textSize">@dimen/p2s_46px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="p2s_36_gray_normal">
+        <item name="android:textColor">@color/rfq_link_color</item>
+        <item name="android:textSize">@dimen/p2s_36px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="p2s_30_black_bold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/p2s_30px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="p2s_30_gray_normal">
+        <item name="android:textColor">@color/rfq_link_color</item>
+        <item name="android:textSize">@dimen/p2s_30px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="p2s_30_green_normal">
+        <item name="android:textColor">@color/p2s_green</item>
+        <item name="android:textSize">@dimen/p2s_30px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="p2s_48_white_bold">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/p2s_48px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="p2s_24_white_normal">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/p2s_24px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="p2s_30_white_bold">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/p2s_30px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="p2s_20_white_normal">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/p2s_20px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="p2s_btn_30_black_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:textSize">@dimen/p2s_30px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">25dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="p2s_btn_30_blue_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/p2s_blue</item>
+        <item name="android:textSize">@dimen/p2s_30px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">25dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary1</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark1</item>
+        <item name="colorAccent">@color/colorAccent1</item>
+    </style>
+
+</resources>

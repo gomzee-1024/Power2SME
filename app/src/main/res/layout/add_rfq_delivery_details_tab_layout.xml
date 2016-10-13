@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reorderFragmentListParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ScrollView
+        android:id="@+id/LL1ParentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        >
+		<LinearLayout
+            android:id="@+id/addressHeaderLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/page_top_padding"
+            android:visibility="visible" >
+            <RelativeLayout
+		        android:id="@+id/taxationParentRL"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentTop="true"
+		        android:layout_marginBottom="@dimen/space_between_two_vertical_component"
+		        android:paddingBottom="5dip"
+	            android:paddingLeft="2dip"
+	            android:paddingRight="2dip"
+	            android:layout_marginLeft="@dimen/page_left_padding"
+            	android:layout_marginRight="@dimen/page_right_padding"
+		        >
+				<android.support.design.widget.TextInputLayout
+					android:id="@+id/TextInputLayout_taxation"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<com.power2sme.android.utilities.customviews.BetterSpinner
+						android:id="@+id/Spinner_taxation"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="@string/addrfq_hint_taxpreferences" />
+
+				</android.support.design.widget.TextInputLayout>
+
+
+		        <ProgressBar
+		            android:id="@+id/ProgressBar_taxationLoader"
+		            style="@style/Style_ProgressBar"
+		            android:layout_width="@dimen/progressbar_in_txtfield_height_width"
+		            android:layout_height="@dimen/progressbar_in_txtfield_height_width"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:visibility="gone" />
+		    </RelativeLayout>
+		
+		    <RelativeLayout
+		        android:id="@+id/urgencyParentRL"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/taxationParentRL"
+		        android:layout_marginBottom="@dimen/space_between_two_vertical_component"
+		        android:paddingBottom="5dip"
+	            android:paddingLeft="2dip"
+	            android:paddingRight="2dip"
+	            android:layout_marginLeft="@dimen/page_left_padding"
+            	android:layout_marginRight="@dimen/page_right_padding"
+		        >
+				<android.support.design.widget.TextInputLayout
+					android:id="@+id/TextInputLayout_urgency"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<com.power2sme.android.utilities.customviews.BetterSpinner
+						android:id="@+id/Spinner_urgency"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="@string/addrfq_hint_urgency" />
+
+				</android.support.design.widget.TextInputLayout>
+		        <ProgressBar
+		            android:id="@+id/ProgressBar_urgencyLoader"
+		            style="@style/Style_ProgressBar"
+		            android:layout_width="@dimen/progressbar_in_txtfield_height_width"
+		            android:layout_height="@dimen/progressbar_in_txtfield_height_width"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:visibility="gone" />
+		    </RelativeLayout>
+		    <LinearLayout
+		        android:id="@+id/isArrangeFreightParentRL"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/urgencyParentRL"
+		        android:layout_marginBottom="@dimen/space_between_two_vertical_component"
+		        android:orientation="horizontal"
+		        android:layout_marginLeft="@dimen/page_left_padding"
+            	android:layout_marginRight="@dimen/page_right_padding">
+		
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="@string/addrfq_label_transport"
+		            android:layout_weight="1"
+		            />
+		        <CheckBox 
+				    android:id="@+id/CheckBox_isArrangeFreightByYou"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        />
+		    </LinearLayout>
+		    <LinearLayout
+		        android:id="@+id/isFormCParentRL"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/isArrangeFreightParentRL"
+		        android:orientation="horizontal"
+		        android:layout_marginLeft="@dimen/page_left_padding"
+            	android:layout_marginRight="@dimen/page_right_padding">
+		
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="@string/addrfq_label_form_c"
+		            android:layout_weight="1"
+		            />
+		        <CheckBox 
+				    android:id="@+id/CheckBox_isFormC"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        />
+		    </LinearLayout>
+			<LinearLayout
+				android:id="@+id/paymentTermParentRL"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/isFormCParentRL"
+				android:orientation="vertical"
+				android:layout_marginLeft="@dimen/page_left_padding"
+				android:layout_marginRight="@dimen/page_right_padding"
+				android:layout_marginTop="10dip">
+
+				<RadioGroup
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/paymentTermRadioGroup"
+					android:checkedButton="@+id/paymentTermCash"
+					android:orientation="horizontal">
+
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/paymentTermCash"
+						android:text="Cash" />
+
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/paymentTermCredit"
+						android:text="Credit"
+						android:layout_marginLeft="20dip"/>
+				</RadioGroup>
+
+				<android.support.design.widget.TextInputLayout
+					android:id="@+id/TextInputLayout_paymentTermDays"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:visibility="gone">
+
+					<EditText
+						android:id="@+id/EditText_paymentTermDays"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="Payment Term in Days"
+						android:imeOptions="actionDone"
+						android:inputType="number|textNoSuggestions"
+						android:singleLine="true"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
+						/>
+
+				</android.support.design.widget.TextInputLayout>
+			</LinearLayout>
+
+		    <LinearLayout
+	            android:id="@+id/LL1"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:orientation="vertical"
+	            android:visibility="gone" 
+	            android:layout_marginLeft="@dimen/page_left_padding"
+            	android:layout_marginRight="@dimen/page_right_padding">
+
+				<android.support.design.widget.TextInputLayout
+					android:id="@+id/TextInputLayout_deliveryAddressLine1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/space_between_two_vertical_component"
+					android:layout_marginBottom="@dimen/space_between_two_vertical_component">
+
+	            <EditText
+	                android:id="@+id/EditText_deliveryAdress"
+	                style="@style/Style_EditText"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:hint="@string/addrfq_hint_address_line1"
+	                android:imeOptions="actionNext"
+	                android:inputType="text"
+	                android:lines="3" 
+	                />
+
+				</android.support.design.widget.TextInputLayout>
+
+				<android.support.design.widget.TextInputLayout
+					android:id="@+id/TextInputLayout_deliveryAddressLine2"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/space_between_two_vertical_component">
+
+					<EditText
+						android:id="@+id/EditText_deliveryAdress2"
+						style="@style/Style_EditText"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="@string/addrfq_hint_address_line2"
+						android:imeOptions="actionNext"
+						android:inputType="text"
+						android:lines="3" />
+
+				</android.support.design.widget.TextInputLayout>
+
+				<android.support.design.widget.TextInputLayout
+					android:id="@+id/TextInputLayout_deliveryPostCode"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/space_between_two_vertical_component">
+
+					<EditText
+						android:id="@+id/EditText_deliveryPostCode"
+						style="@style/Style_EditText"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="@string/addrfq_hint_pincode"
+						android:imeOptions="actionDone"
+						android:inputType="number" />
+
+				</android.support.design.widget.TextInputLayout>
+	        </LinearLayout>
+	        <LinearLayout
+		        android:id="@+id/LL2"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_below="@+id/LL1ParentScrollView"
+		        android:orientation="vertical"
+		        android:visibility="visible" 
+		        >
+                <View
+		            style="@style/Style_View_divider"
+		            android:layout_width="match_parent"
+		            android:layout_height="1dip" 
+		            android:layout_marginTop="@dimen/space_above_divider"
+		            android:layout_marginBottom="@dimen/space_below_divider"/>
+                
+                <TextView
+                    android:id="@+id/TextView_selectDeliveryAddressLabel"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="@string/addrfq_label_select_delivery_address"
+		            android:layout_marginLeft="@dimen/page_left_padding"
+            		android:layout_marginRight="@dimen/page_right_padding"
+		            />
+
+				<LinearLayout
+					android:id="@+id/addressTitleParent"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="@dimen/page_top_padding"
+					android:orientation="vertical"
+					android:gravity="center_vertical"
+					android:visibility="gone">
+					<TextView
+						android:id="@+id/TextView_firstAddress"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:singleLine="true"
+						android:text=""
+						android:textSize="15sp"
+						android:textStyle="bold"
+						android:textColor="@color/black"
+						/>
+					<TextView
+						android:id="@+id/TextView_secondAddress"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text=""
+						android:textSize="@dimen/h3"
+						android:textColor="@color/darkGrayText"/>
+					<TextView
+						android:id="@+id/TextView_cityPostCode"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textColor="@color/darkGrayText"
+						android:text=""
+						android:textSize="@dimen/h3"
+						/>
+				</LinearLayout>
+				
+				
+				
+				<LinearLayout
+		        	android:id="@+id/LL3"
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content"
+		        	android:orientation="horizontal"
+		        	android:layout_marginTop="@dimen/space_between_two_vertical_component">
+		        	<View
+		        	    android:layout_width="match_parent" 
+						android:layout_height="1dip"
+						android:layout_weight="1" 
+		        	    />
+					<Button
+			            android:id="@+id/Button_addDeliveryAddress"
+			            style="@style/Style_Button_SquareGray"
+			            android:layout_width="wrap_content"
+			            android:layout_marginBottom="@dimen/space_between_two_vertical_component"
+			            android:layout_marginLeft="@dimen/page_left_padding"
+			            android:layout_marginRight="@dimen/page_right_padding"
+			            android:text="@string/addrfq_button_add_new_address"
+			            />
+			
+			        <Button
+			            android:id="@+id/Button_selectDeliveryAddress"
+			            style="@style/Style_Button_SquareYellow"
+			            android:layout_width="wrap_content"
+			            android:layout_marginBottom="@dimen/space_between_two_vertical_component"
+			            android:layout_marginRight="@dimen/page_right_padding"
+			            android:text="@string/addrfq_button_select_address"
+			            />
+		        </LinearLayout>
+		    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

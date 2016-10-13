@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/window_bg_color"
+    android:minHeight="48dip" >
+
+    <LinearLayout
+        android:id="@+id/spinnerSuperParent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:id="@+id/spinnerLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" 
+            android:paddingBottom="@dimen/space_between_two_vertical_component"
+        	android:paddingLeft="@dimen/page_left_padding"
+        	android:paddingRight="@dimen/page_right_padding"
+        	android:paddingTop="@dimen/space_between_two_vertical_component"
+            android:background="@color/colorAccent">
+            <!--<Spinner
+                android:id="@+id/drawerSpinner"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" 
+                android:background="@drawable/spinner_dropdown_btn"/>-->
+        </LinearLayout>
+        <View
+            style="@style/Style_View_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <View
+            style="@style/Style_View_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dip" />
+
+        <TextView
+            android:id="@+id/drawerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_between_two_vertical_component"
+        	android:layout_marginLeft="@dimen/page_left_padding"
+        	android:layout_marginRight="@dimen/page_right_padding"
+        	android:layout_marginTop="@dimen/space_between_two_vertical_component"
+            style="@style/Style_TextView_Subhead1_accent1"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/space_between_two_vertical_component"
+       	android:layout_marginLeft="@dimen/page_left_padding"
+       	android:layout_marginRight="@dimen/page_right_padding"
+       	android:layout_marginTop="@dimen/space_between_two_vertical_component"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/drawer_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/drawer_itemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/drawer_icon"
+                android:singleLine="true"
+                style="@style/Style_TextView_body1" 
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/page_left_padding"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

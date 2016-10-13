@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_svp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_searchViewParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dip"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/EditText_searchQuery"
+                style="@style/Style_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/deals_filter_hint_searchquery"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapCharacters"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/section_dividers" />
+
+            <ImageButton
+                android:id="@+id/ImageButton_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/deals_filter" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_filterParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/TextView_searchResultCount"
+                style="@style/Style_TextView_body1_WhiteTextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="5dip"
+                android:text="@string/deals_label_filter_result_count" />
+
+            <TextView
+                android:id="@+id/TextView_viewAll"
+                style="@style/Style_TextView_body1_WhiteTextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="5dip"
+                android:text="@string/deals_label_view_all" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.malinskiy.superrecyclerview.SuperRecyclerView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ListView_deals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_empty="@layout/news_list_empty_view"
+        app:layout_moreProgress="@layout/load_more_footer"
+        app:recyclerClipToPadding="false"
+        app:scrollbarStyle="outsideOverlay"></com.malinskiy.superrecyclerview.SuperRecyclerView>
+
+    <include
+        android:id="@+id/no_connection"
+        layout="@layout/no_internet_connection_view"
+        android:visibility="gone" />
+</LinearLayout>
+

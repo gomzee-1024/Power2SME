@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/rootScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackground" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/page_bottom_padding"
+            android:paddingTop="@dimen/page_top_padding"
+            android:paddingLeft="@dimen/page_left_padding"
+            android:paddingRight="@dimen/page_right_padding"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/EditText_Email"
+                style="@style/Style_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/signup_hint_emailid"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/EditText_mobileNumber"
+                android:completionThreshold="1"
+                />
+            <EditText
+                android:id="@+id/EditText_mobileNumber"
+                style="@style/Style_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/signup_hint_mobile_number"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:layout_marginTop="@dimen/space_between_two_vertical_component"
+                />
+
+            <Button
+                android:id="@+id/Button_register"
+                style="@style/Style_Button_SquareYellow"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="@dimen/space_between_two_vertical_component"
+                android:layout_marginLeft="@dimen/page_left_padding"
+                android:layout_marginRight="@dimen/page_right_padding"
+                android:text="@string/signup_button_register"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

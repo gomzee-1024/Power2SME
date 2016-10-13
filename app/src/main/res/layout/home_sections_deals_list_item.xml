@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<!--<View
+		android:layout_width="match_parent"
+		android:layout_height="1dip"
+		android:background="@color/dividers"/>-->
+	<LinearLayout
+		android:id="@+id/expandableLL_sectionHead"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_weight="1"
+		android:layout_marginLeft="10dp"
+		android:paddingTop="8dip"
+		android:paddingRight="16dip">
+
+		<ImageView
+				android:layout_width="50dip"
+				android:layout_height="50dip"
+				android:id="@+id/ImageView_categoryDrawable"
+				android:layout_gravity="center_vertical"
+				/>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_marginLeft="20dip"
+			>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1">
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+					<TextView
+						android:visibility="gone"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/Style_TextView_body1"
+						android:text="Product : "
+						android:textStyle="bold"
+						/>
+					<TextView
+						android:id="@+id/TextView_productName"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/Style_TextView_body1_light"
+						android:textColor="@color/colorBlack"
+						android:text="MS HR Sheet 6*1250*2500"/>
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+					<TextView
+						android:id="@+id/TextView_productDetails"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/Style_TextView_body1_light"
+						android:textSize="@dimen/h3"
+						android:text="POLYMER (Bhusham Polymers)"/>
+					<TextView
+						android:id="@+id/TextView_startingRate"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/Style_TextView_body1_accent1"
+						android:textSize="@dimen/h3"
+						android:text="Starting from R1000.00 Onwards"/>
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:layout_marginTop="10dip"
+						android:layout_marginBottom="0dip"
+						android:id="@+id/LinearLayout_dealIdParent"
+						android:visibility="gone"
+						>
+						<TextView
+							android:id="@+id/TextView_DealIdLabel"
+							style="@style/Style_TextView_body1"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Deal ID: "
+							android:textStyle="bold"
+							android:gravity="center"
+							/>
+						<TextView
+							android:id="@+id/TextView_DealId"
+							style="@style/Style_TextView_body1_light"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							/>
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dip"
+				android:layout_gravity="center|top"
+				android:paddingTop="15dp">
+
+				<ImageView
+					android:id="@+id/ImageView_indicator"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					/>
+			</LinearLayout>
+		</LinearLayout>
+
+		<ImageView
+			android:layout_gravity="center_vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/home_section_deals_arrow"/>
+
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dip"
+		android:background="@color/dividers"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="8dp"/>
+
+</LinearLayout>
+
+
+<!--
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/expandableLL_sectionHead"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_weight="1"
+		android:paddingTop="16dip"
+		android:paddingLeft="16dip"
+		android:paddingRight="16dip">
+
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center|top">
+
+			<TextView
+				android:layout_width="60dip"
+				android:layout_height="60dip"
+				android:id="@+id/TextView_categoryDrawable"
+				android:textSize="35sp"
+				android:background="@color/NewBlue"
+				android:text="A"
+				android:gravity="center"
+				android:textColor="@color/colorWhite" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_marginLeft="20dip">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1">
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/Style_TextView_body1"
+						android:text="Product : "
+						android:textStyle="bold"
+						android:visibility="gone" />
+					<TextView
+						android:id="@+id/TextView_dealsListItem"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/Style_TextView_body1_light"
+						android:text="MS HR Sheet 6*1250*2500"/>
+				</LinearLayout>
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+					<TextView
+						android:id="@+id/TextView_productDetails"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/Style_TextView_body1_light"
+						android:text="POLYMER (Bhusham Polymers)"
+						android:textSize="@dimen/h3" />
+					<TextView
+						android:id="@+id/TextView_startingRate"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/Style_TextView_body1_accent1"
+						android:text="Starting from R1000.00 Onwards"
+						android:textSize="@dimen/h3" />
+					</LinearLayout>
+			</LinearLayout>
+
+
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>
+
+-->

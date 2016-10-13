@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="200dp"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/first_view"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/product_name_bg"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp">
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRODUCT is thhis of five and dbsg sdbjhgdeh "
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RS Deal Price"
+            android:layout_marginLeft="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"/>
+        <TextView
+            android:id="@+id/list_price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:text="Rs 104535/MT for 15001 MT and above"
+            android:textSize="12sp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SKU Code"
+            android:layout_marginLeft="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"/>
+        <TextView
+            android:id="@+id/sku_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WestBengal,Kolkata"
+            android:textSize="12sp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Locations"
+            android:layout_marginLeft="4dp"
+            android:textStyle="bold"
+            android:textSize="12sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"/>
+        <TextView
+            android:id="@+id/locations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WestBengal,Kolkata"
+            android:textSize="12sp"
+            android:layout_marginLeft="4dp"/>
+
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_light"
+            android:layout_margin="4dp"
+            android:text="Confirm"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

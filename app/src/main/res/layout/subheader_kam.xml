@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    android:paddingLeft="20dip"
+    android:paddingRight="20dip"
+    android:paddingTop="10dip"
+    android:paddingBottom="10dip"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USING AS: "
+        android:textColor="@color/white"
+        android:textSize="@dimen/button"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" &lt;COMPANY NAME&gt;"
+        android:id="@+id/TextView_CompanyName"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button"/>
+    <View
+        android:layout_width="1dip"
+        android:layout_height="1dip"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:id="@+id/TextView_contactUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SWITCH"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button"
+        />
+</LinearLayout>

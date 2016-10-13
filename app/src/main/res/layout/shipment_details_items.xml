@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/space_between_two_vertical_component"
+    android:paddingBottom="@dimen/space_between_two_vertical_component">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/TextView_shipmentMaterialHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" 
+            style="@style/Style_TextView_Subhead1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="@dimen/space_between_two_vertical_component">
+
+            <TextView
+                android:id="@+id/TextView_shipmentMaterialQuantityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shipmentdetails_label_quantity" 
+                style="@style/Style_TextView_body1_light"/>
+
+            <TextView
+                android:id="@+id/TextView_shipmentMaterialQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" 
+                style="@style/Style_TextView_body1_light"/>
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  |  " 
+                style="@style/Style_TextView_body1_light"/>
+            <TextView
+                android:id="@+id/TextView_shipmentMaterialPriceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shipmentdetails_label_rate" 
+                style="@style/Style_TextView_body1_light"/>
+
+            <TextView
+                android:id="@+id/TextView_shipmentMaterialPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+				style="@style/Style_TextView_body1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextView_shipmentMaterialTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" 
+        style="@style/Style_TextView_body1"
+        android:gravity="center_vertical|right"/>
+
+</LinearLayout>

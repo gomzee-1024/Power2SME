@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/grp13" android:visible="true">
+        <item
+            android:id="@+id/drawer_menu_item_chat"
+            android:icon="@drawable/chat_icon"
+            android:title="Chat"
+            />
+    </group>
+    <group android:id="@+id/grp2">
+        <item
+            android:id="@+id/drawer_menu_item_add_new_rfq"
+            android:icon="@drawable/menu_icon_add_new_rfq"
+            android:title="@string/drawer_menu_rfq_add"
+            />
+    </group>
+    <group android:id="@+id/grp3">
+        <item
+            android:id="@+id/drawer_menu_item_account_updates"
+            android:icon="@drawable/menu_icon_updates"
+            android:title="@string/drawer_menu_updates"
+            />
+    </group>
+    <group android:id="@+id/grp4">
+        <item
+            android:id="@+id/drawer_menu_item_contact_details"
+            android:icon="@drawable/menu_icon_contact"
+            android:title="@string/drawer_menu_contact_edit"
+            />
+    </group>
+    <group android:id="@+id/grp5" android:visible="false">
+        <item
+            android:id="@+id/drawer_menu_item_deals"
+            android:icon="@drawable/menu_icon_deals"
+            android:title="@string/drawer_menu_deals"
+            />
+    </group>
+    <group android:id="@+id/grp6">
+        <item
+            android:id="@+id/drawer_menu_item_myrfq"
+            android:icon="@drawable/menu_icon_rfq"
+            android:title="@string/drawer_menu_rfq"
+            />
+    </group>
+    <group android:id="@+id/grp7">
+        <item
+            android:id="@+id/drawer_menu_item_myorders"
+            android:icon="@drawable/menu_icon_myorders"
+            android:title="@string/drawer_menu_orders"
+            />
+    </group>
+    <group android:id="@+id/grp8">
+        <item
+            android:id="@+id/drawer_menu_item_shipping_address"
+            android:icon="@drawable/menu_icon_address"
+            android:title="@string/drawer_menu_delivery_address_list"
+            />
+    </group>
+    <group android:id="@+id/grp9">
+        <item
+            android:id="@+id/drawer_menu_item_news"
+            android:icon="@drawable/menu_icon_khabar"
+            android:title="@string/drawer_menu_sme_khabar"
+            />
+    </group>
+    <group android:id="@+id/grp10">
+        <item
+            android:id="@+id/drawer_menu_item_contact_us"
+            android:icon="@drawable/menu_icon_contact"
+            android:title="@string/drawer_menu_contact_us"
+            />
+    </group>
+    <group android:id="@+id/grp11">
+        <item
+            android:id="@+id/drawer_menu_item_aboutus"
+            android:icon="@drawable/menu_icon_about"
+            android:title="@string/drawer_menu_about_power2sme"
+            />
+    </group>
+    <group android:id="@+id/grp12">
+        <item
+            android:id="@+id/drawer_menu_item_logout"
+            android:icon="@drawable/menu_icon_logout"
+            android:title="@string/drawer_menu_logout"
+            />
+    </group>
+</menu>

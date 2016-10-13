@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pattern_error"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:src="@drawable/oops_images" />
+
+        <TextView
+            android:id="@+id/TextView_noInternetMessage1"
+            style="@style/Style_TextView_Subhead1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:text="Internal Server Error"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/TextView_noInternetMessage2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:text="WE'RE SORRY..."
+            android:textColor="@color/NewBlue"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/Style_TextView_Subhead1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="It looks like we are missing a piece here. Tap \'Previous\' to retry or head back to Home!"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Button_goToPreviousPage"
+                style="@style/Style_Button_SquareYellow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="#45b4f4"
+                android:text="PREVIOUS"
+                android:textSize="@dimen/h2" />
+
+            <Button
+                android:id="@+id/Button_goToHomePage"
+                style="@style/Style_Button_SquareYellow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="#2a2a2a"
+                android:text="HOME"
+                android:textSize="@dimen/h2" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+

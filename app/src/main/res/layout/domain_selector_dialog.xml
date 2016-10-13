@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dip">
+
+    <RadioGroup
+        android:id="@+id/RadioGroup_domainRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/splash_domain_selector_dialog_rediobutton_live"
+            android:id="@+id/RadioButton_live"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/splash_domain_selector_dialog_rediobutton_uat"
+            android:id="@+id/RadioButton_uat" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/splash_domain_selector_dialog_rediobutton_custom"
+            android:id="@+id/RadioButton_custom" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/EditText_domain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="@string/splash_domain_selector_dialog_edittext_hint"
+        android:layout_marginTop="15dip"
+        android:visibility="visible"
+        android:layout_marginLeft="30dip"/>
+
+    <TextView
+        android:id="@+id/TextView_helpText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/splash_domain_selector_dialog_help"
+        android:layout_marginTop="10dip"
+        android:visibility="visible"
+        android:layout_marginLeft="30dip"/>
+</LinearLayout>

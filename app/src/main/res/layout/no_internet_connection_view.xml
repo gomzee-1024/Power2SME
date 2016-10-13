@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="200dip"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/root">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_network" />
+
+        <TextView
+            android:id="@+id/TextView_noInternetMessage_buy"
+            style="@style/Style_TextView_Subhead1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_between_two_vertical_component"
+            android:gravity="center"
+            android:text="@string/no_internet_access" />
+
+        <Button
+            android:id="@+id/Button_retryForInternet"
+            style="@style/Style_Button_SquareYellow"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/page_left_padding"
+            android:layout_marginRight="@dimen/page_right_padding"
+            android:layout_marginTop="@dimen/space_between_two_vertical_component"
+            android:text="@string/re_try" />
+</LinearLayout>

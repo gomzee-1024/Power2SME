@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/window_bg_color"
+        android:orientation="vertical" 
+        android:layout_alignParentTop="true">
+
+        <ListView
+            android:id="@+id/ListView_deliveryAddresses"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/dark_sep_line_color"
+            android:dividerHeight="1dip" />
+        
+</LinearLayout>

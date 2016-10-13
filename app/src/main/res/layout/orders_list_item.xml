@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dip"
+    android:paddingTop="20dip">
+    <LinearLayout
+        android:id="@+id/LinearLayout_OrderId_Date_Lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/page_left_padding"
+        android:layout_marginRight="@dimen/page_right_padding"
+        >
+		<TextView
+            android:id="@+id/TextView_orderIdLabel"
+            style="@style/p2s_36_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myorders_label_orderid"/>
+
+        <TextView
+            android:id="@+id/TextView_orderId"
+            style="@style/p2s_36_orange_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <View
+            android:id="@+id/placeHolder1"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+        
+		<TextView
+            android:id="@+id/TextView_dateLabel"
+            style="@style/p2s_36_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:text="@string/myorders_label_date"/>
+		
+        <TextView
+            android:id="@+id/TextView_date"
+            style="@style/p2s_36_orange_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/LinearLayout_OrderId_Date_Lable"
+        android:id="@+id/LinearLayout_ordersItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_marginLeft="@dimen/page_left_padding"
+        android:layout_marginRight="@dimen/page_right_padding"
+        />
+    <LinearLayout
+        android:id="@+id/LinearLayout_taxation_total_lable"
+        android:layout_below="@id/LinearLayout_ordersItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/page_left_padding"
+        android:layout_marginRight="@dimen/page_right_padding"
+        android:layout_marginTop="5dip"
+        >
+
+        <TextView
+            android:id="@+id/TextView_taxationLabel"
+            style="@style/p2s_30_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myorders_label_taxation" />
+
+        <TextView
+            android:id="@+id/TextView_taxation"
+            style="@style/p2s_30_gray_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <View
+            android:id="@+id/placeHolder2"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/TextView_grandTotalLabel"
+            style="@style/p2s_36_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:text="@string/myorders_label_total" />
+
+        <TextView
+            android:id="@+id/TextView_grandTotal"
+            style="@style/p2s_36_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout_Status_lable"
+        android:layout_below="@id/LinearLayout_taxation_total_lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/page_left_padding"
+        android:layout_marginRight="@dimen/page_right_padding"
+        android:layout_marginTop="5dip"
+        >
+
+        <TextView
+            android:id="@+id/TextView_statusLabel"
+            style="@style/p2s_30_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myorders_label_status" />
+
+        <TextView
+            android:id="@+id/TextView_status"
+            style="@style/p2s_30_green_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/LinearLayout_Status_lable"
+        android:id="@+id/LinearLayout_quoteToBeAccepted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/page_left_padding"
+        android:layout_marginRight="@dimen/page_right_padding"
+        android:layout_marginTop="10dip"
+        >
+		<View
+            android:id="@+id/placeHolder3"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/Button_viewShipmentLocation"
+            style="@style/p2s_btn_30_black_white"
+            android:layout_width="wrap_content"
+            android:text="@string/myorders_button_viewShipmentLocation"
+            android:visibility="gone"
+            android:layout_marginRight="10dip"/>
+        <Button
+            android:id="@+id/Button_reOrder"
+            style="@style/p2s_btn_30_blue_white"
+            android:layout_width="wrap_content"
+            android:text="@string/myorders_button_reorder" />
+    </LinearLayout>
+</RelativeLayout>

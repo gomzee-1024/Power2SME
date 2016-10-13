@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button">12sp</dimen>
+    <dimen name="menu">14sp</dimen>
+    <dimen name="caption">12sp</dimen>
+    <dimen name="body1">14sp</dimen>
+    <dimen name="body2">14sp</dimen>
+    <dimen name="subhead1">16sp</dimen>
+    <dimen name="subhead2">16sp</dimen>
+    <dimen name="title">20sp</dimen>
+    <dimen name="headline">24sp</dimen>
+    <dimen name="display1">34sp</dimen>
+    <dimen name="display2">45sp</dimen>
+    <dimen name="display3">56sp</dimen>
+    <dimen name="display4">112sp</dimen>
+
+
+    <dimen name="body1_accent1">14sp</dimen>
+    <dimen name="body1_accent2">14sp</dimen>
+    <dimen name="body1_light">14sp</dimen>
+    <dimen name="dividers">1sp</dimen>
+    <dimen name="section_dividers">1sp</dimen>
+    <dimen name="shipment_Status">11sp</dimen>
+
+    <dimen name="spinner_left_padding">6dip</dimen>
+
+
+
+    <dimen name="body_first_level_text_size">18sp</dimen>
+    <dimen name="body_second_level_text_size">15sp</dimen>
+    <dimen name="body_third_level_text_size">12sp</dimen>
+
+    <dimen name="button_border_radius">3dip</dimen>
+    <dimen name="actionbar_filter_text_size">11sp</dimen>
+    <dimen name="h1">18sp</dimen>
+    <dimen name="h2">16sp</dimen>
+    <dimen name="h3">14sp</dimen>
+
+    <dimen name="button_caption">16sp</dimen>
+
+    <!-- <dimen name="button_caption">16</dimen> -->
+
+    <dimen name="text_size_level_1">18sp</dimen>
+    <dimen name="text_size_level_2">15sp</dimen>
+    <dimen name="text_size_level_3">12sp</dimen>
+    <dimen name="text_size_level_4">10sp</dimen>
+
+    <!-- MARGINS AND PADDING -->
+    <dimen name="page_top_padding">16dip</dimen>
+    <dimen name="page_bottom_padding">16dip</dimen>
+    <dimen name="page_left_padding">16dip</dimen>
+    <dimen name="page_right_padding">16dip</dimen>
+    <dimen name="login_padding">30dp</dimen>
+
+    <dimen name="space_below_divider">10dip</dimen>
+    <dimen name="space_above_divider">10dip</dimen>
+
+    <dimen name="search_edittext_padding">5dip</dimen>
+    <dimen name="layout_mini_margin">5dip</dimen>
+
+    <dimen name="space_between_two_vertical_component">15dip</dimen>
+    <dimen name="space_between_two_horizontal_component">10dip</dimen>
+
+    <dimen name="divider_height_zero_level">0dip</dimen>
+    <dimen name="divider_height_first_level">1dip</dimen>
+    <dimen name="divider_height_second_level">2dip</dimen>
+    <dimen name="divider_height_third_level">3dip</dimen>
+
+    <dimen name="progressbar_in_txtfield_height_width">30dip</dimen>
+
+    <!-- About US Page -->
+    <dimen name="aboutus_min_rows_height">80dip</dimen>
+
+    <!-- Home Page -->
+    <dimen name="home_progressbar_height">4dip</dimen>
+
+
+    <!-- SME KHABAR LIST ITEM-->
+    <dimen name="sme_khabar_divider_padding_top">8dip</dimen>
+    <dimen name="sme_khabar_divider_padding_bottom">8dip</dimen>
+    <dimen name="sme_khabar_thumb_icon_height">80dip</dimen>
+    <dimen name="sme_khabar_thumb_icon_width">80dip</dimen>
+
+    <!-- tracking pages -->
+    <dimen name="p2s_20px">11sp</dimen>
+    <dimen name="p2s_24px">11sp</dimen>
+    <dimen name="p2s_30px">11sp</dimen>
+    <dimen name="p2s_36px">12sp</dimen>
+    <dimen name="p2s_46px">16sp</dimen>
+    <dimen name="p2s_48px">16sp</dimen>
+    <dimen name="p2s_28dp">28dp</dimen>
+    <dimen name="p2s_14dp">14dp</dimen>
+
+
+    <!--<dimen name="p2s_20px">11sp</dimen>
+    <dimen name="p2s_24px">12sp</dimen>
+    <dimen name="p2s_30px">14sp</dimen>
+    <dimen name="p2s_36px">16sp</dimen>
+    <dimen name="p2s_46px">18sp</dimen>
+    <dimen name="p2s_48px">19sp</dimen>-->
+
+    <!--<dimen name="p2s_20px">8sp</dimen>
+    <dimen name="p2s_24px">9sp</dimen>
+    <dimen name="p2s_30px">10sp</dimen>
+    <dimen name="p2s_36px">12sp</dimen>
+    <dimen name="p2s_46px">16sp</dimen>
+    <dimen name="p2s_48px">18sp</dimen>-->
+
+
+
+</resources>

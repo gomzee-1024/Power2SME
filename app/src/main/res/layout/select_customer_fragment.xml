@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/superRootLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg_color"
+    android:orientation="vertical" >
+    <ScrollView
+        android:id="@+id/rootContainerScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/page_left_padding"
+            android:paddingRight="@dimen/page_right_padding"
+            android:paddingBottom="@dimen/page_bottom_padding"
+            android:layout_marginTop="@dimen/page_top_padding">
+
+            <EditText
+                android:id="@+id/EditText_email"
+                style="@style/Style_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_between_two_vertical_component"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:hint="@string/kam_hint_customer_emailid"
+                />
+
+            <Button
+                android:id="@+id/Button_submit"
+                style="@style/Style_Button_SquareYellow"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_between_two_vertical_component"
+                android:text="@string/label_login"
+                android:layout_marginBottom="@dimen/space_between_two_vertical_component"
+                android:layout_marginLeft="@dimen/page_left_padding"
+                android:layout_marginRight="@dimen/page_right_padding"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

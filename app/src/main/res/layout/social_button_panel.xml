@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="12dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/p2s_28dp"
+    android:paddingRight="@dimen/p2s_28dp">
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:visibility="visible" />
+
+    <com.facebook.widget.LoginButton
+        android:id="@+id/fbLoginButton_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        fb:login_text="Login with facebook" />
+
+
+    <TextView
+        android:id="@+id/linkedInLoginButton_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/linked_in_button_for_9_patch"
+        android:gravity="center"
+        android:paddingLeft="48dp"
+        android:text="LOGIN WITH LINKEDIN   "
+        android:textColor="@color/white"
+        android:textSize="@dimen/subhead2" />
+</LinearLayout>
+
+

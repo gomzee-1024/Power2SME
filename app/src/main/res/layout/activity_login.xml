@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_login"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/TrasparentActionBar" />
+
+    <include
+        android:id="@+id/smooth_progressbar_layout"
+        layout="@layout/smooth_progressbar_layout" />
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="220dp" />
+
+    <include
+        android:id="@+id/login_divider"
+        layout="@layout/login_divider" />
+
+    <include
+        android:id="@+id/social_login"
+        layout="@layout/social_button_panel" />
+</LinearLayout>
+

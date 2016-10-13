@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/window_bg_color"
+        android:orientation="vertical">
+
+        <com.malinskiy.superrecyclerview.SuperRecyclerView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ListView_deliveryAddresses"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_empty="@layout/no_delivery_address"
+            app:recyclerClipToPadding="false"
+            app:scrollbarStyle="outsideOverlay" />
+
+        <include
+            android:id="@+id/no_connection"
+            layout="@layout/no_internet_connection_view"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ImageButton_addNewDeliveryAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/page_right_padding"
+        android:background="@null"
+        android:paddingBottom="@dimen/page_bottom_padding"
+        android:src="@drawable/floating_button" />
+
+</RelativeLayout>

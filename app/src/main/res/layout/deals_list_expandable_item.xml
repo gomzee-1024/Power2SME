@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/space_below_divider"
+    android:paddingBottom="@dimen/space_above_divider"
+    android:paddingLeft="@dimen/page_left_padding"
+    android:paddingRight="@dimen/page_right_padding">
+    <!--<com.power2sme.android.utilities.customviews.ExpandableLayout
+        android:id="@+id/expandlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/expandableLL_sectionHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/ic_launcher"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Product : "/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MS HR Sheet 6*1250*2500"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="POLYMER (Bhusham Polymers)"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Starting from R1000.00 Onwards"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView2"
+                        android:src="@drawable/ic_launcher"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/expandableLL_sectionChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/LLParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/space_below_divider"
+                    >
+                    <TextView
+                        android:id="@+id/TextView_DealIdLabel"
+                        style="@style/Style_TextView_body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deal ID: "
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:id="@+id/TextView_DealId"
+                        style="@style/Style_TextView_body1_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/LinearLayout_ProductParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/space_below_divider"
+                    >
+                    <TextView
+                        android:id="@+id/TextView_ProductLabel"
+                        style="@style/Style_TextView_body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product: "
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/TextView_Product"
+                        style="@style/Style_TextView_body1_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/TextView_rateLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deals_label_rate"
+                        style="@style/Style_TextView_body1"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:id="@+id/LinearLayout_ratesContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/TextView_stockLastMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deals_till_stock_last_msg"
+                style="@style/Style_TextView_body1"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:id="@+id/LinearLayout_dealsActionPanel"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                >
+
+                <Button
+                    android:id="@+id/Button_po"
+                    style="@style/Style_Button_SquareYellow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:text="Upload PO Now"
+                    />
+
+                <Button
+                    android:id="@+id/Button_interested"
+                    style="@style/Style_Button_SquareGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:text="I am interested"
+                    android:layout_marginLeft="10dip"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </com.power2sme.android.utilities.customviews.ExpandableLayout>-->
+</LinearLayout>

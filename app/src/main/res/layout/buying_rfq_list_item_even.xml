@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/NewGray"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/page_left_padding"
+    android:paddingRight="@dimen/page_right_padding"
+    >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_rfqIdParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_below_divider">
+
+        <TextView
+            android:id="@+id/TextView_orderIdLabel"
+            style="@style/Style_TextView_body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myrfqs_label_quoteid" />
+
+        <TextView
+            android:id="@+id/TextView_orderId"
+            style="@style/Style_TextView_body1_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <View
+            android:id="@+id/placeHolder1"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/TextView_dateLabel"
+            style="@style/Style_TextView_body1"
+            android:text="@string/myrfqs_label_quotedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/TextView_date"
+            style="@style/Style_TextView_body1_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextView_interestedMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Style_TextView_Subhead1"
+        android:text="We have received your request for the deal items mentioned below, you shall hear from us shortly."
+        android:visibility="gone"
+        android:layout_marginTop="10dip"
+        android:singleLine="false"
+        />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_rfqItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout_taxPrefsParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_between_two_vertical_component"
+        >
+        <TextView
+            android:id="@+id/TextView_taxationLabel"
+            style="@style/Style_TextView_body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myrfqs_label_taxation"
+            />
+
+        <TextView
+            android:id="@+id/TextView_taxation"
+            style="@style/Style_TextView_body1_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+
+        <View
+            android:id="@+id/placeHolder2"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/TextView_billingLabel"
+            style="@style/Style_TextView_body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myrfqs_label_total"
+            />
+
+        <TextView
+            android:id="@+id/TextView_billing"
+            style="@style/Style_TextView_body1_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout_statusParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_between_two_vertical_component"
+        >
+        <TextView
+            android:id="@+id/TextView_statusLabel"
+            style="@style/Style_TextView_body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myrfqs_label_status"
+            />
+
+        <TextView
+            android:id="@+id/TextView_status"
+            style="@style/Style_TextView_body1_accent1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout_quoteToBeAccepted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_between_two_vertical_component"
+        android:paddingBottom="@dimen/space_above_divider"
+        >
+        <Button
+            android:id="@+id/Button_callus"
+            style="@style/Style_Button_SquareYellow"
+            android:layout_width="wrap_content"
+            android:text="@string/myrfqs_button_calus"
+            android:visibility="visible"
+            android:layout_marginRight="@dimen/page_right_padding"
+            />
+
+        <Button
+            android:id="@+id/Button_accept"
+            style="@style/Style_Button_SquareYellow"
+            android:layout_width="wrap_content"
+            android:text="@string/myrfqs_button_accept"
+            android:visibility="visible"
+            android:layout_marginRight="@dimen/page_right_padding"            />
+
+        <Button
+            android:id="@+id/Button_uploadPO"
+            style="@style/Style_Button_SquareYellow"
+            android:layout_width="wrap_content"
+            android:text="@string/myrfqs_button_uploadpo"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/page_right_padding"/>
+        <View
+            android:id="@+id/placeHolder3"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

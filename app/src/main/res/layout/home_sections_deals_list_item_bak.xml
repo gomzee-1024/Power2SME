@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:paddingTop="1dip"
+        android:paddingBottom="1dip"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/TextView_dealsListItem"
+            style="@style/Style_TextView_body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="this is test account updates"
+            android:layout_marginLeft="@dimen/page_left_padding"
+            android:paddingLeft="20dip"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip"
+            android:background="@drawable/tag"      />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+include ':app', ':googleplayservices', ':LinkedinLibrary'
+include ':RSSReaderLibrary'
+include ':AFileChooser'
+include ':PullToRefreshLibrary'

@@ -1,0 +1,6 @@
+<resources>
+    <string name="update_linkedin_app_title">Install LinkedIn App</string>
+    <string name="update_linkedin_app_message">Please install LinkedIn App to login with LinkedIn</string>
+    <string name="update_linkedin_app_download">Download</string>
+    <string name="update_linkedin_app_cancel">Cancel</string>
+</resources>

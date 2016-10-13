@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/expandableLL_sectionChild"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    android:paddingLeft="95dip"
+    android:paddingRight="16dip"
+    android:paddingBottom="16dip">
+    <LinearLayout
+        android:id="@+id/LLParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/TextView_rateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deals_label_rate"
+                style="@style/Style_TextView_body1"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:id="@+id/LinearLayout_ratesContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/TextView_stockLastMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deals_till_stock_last_msg"
+        style="@style/Style_TextView_body1"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:id="@+id/LinearLayout_dealsActionPanel"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="right"
+        android:weightSum="2"
+        android:layout_marginTop="10dip"
+        >
+
+        <Button
+            android:id="@+id/Button_po"
+            style="@style/Style_Button_SquareYellow"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:text="UPLOAD PO NOW"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/space_between_two_horizontal_component"
+            />
+
+        <Button
+            android:id="@+id/Button_interested"
+            style="@style/Style_Button_SquareGray"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:text="I AM INTERESTED"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+</LinearLayout>

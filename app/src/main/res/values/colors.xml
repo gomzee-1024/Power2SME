@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="p2s_orange">#e07516</color>
+	<color name="p2s_green">#28a745</color>
+	<color name="p2s_blue">#09b2f1</color>
+
+	<color name="source_to_current_list">#12b2f0</color>
+	<color name="current_to_destiation_list">#a9a9a9</color>
+
+
+	<color name="colorPrimary">#03a9f5</color>
+	<color name="colorPrimaryDark">#1976D2</color>
+	<color name="colorAccent">#F4B400</color>
+	<color name="textColorPrimary">#000000</color>
+	<color name="windowBackground">#ffffff</color>
+	<color name="navigationBarColor">#000000</color>
+
+	<color name="colorWhite">#FFFFFF</color>
+	<color name="colorBlack">#000000</color>
+
+	<color name="topbar">#F6F6F6</color>
+	<color name="or_sign_with">#E7E7E7</color>
+
+	<color name="yellow_button_text">#ffffff</color>
+	<color name="white_button_text">#000000</color>
+
+	<color name="primary87">#212121</color>
+	<color name="primary54">#727272</color>
+	<color name="accent1">#03A9F4</color>   <!-- blue -->
+	<color name="accent2">#F4B400</color>   <!-- yellow -->
+	<color name="accent3">#159e2f</color>	<!-- green -->
+	<color name="body1_light">#727272</color>
+	<color name="dividers">#B0B0B0</color>
+	<color name="section_dividers">#DADADA</color>
+	<color name="ulternate_row_color">#f1f1f1</color>
+
+	<color name="login_register_bg">#e8e8e8</color>
+	<color name="login_register_orange_bg">#ff5722</color>
+	<color name="login_register_unsel_tab_border">#757575</color>
+
+
+	<color name="list_selector">#a0dafa</color>
+	<color name="textfield_grayedout_color">#979797</color>
+
+
+
+
+
+
+
+
+
+<color name="signup_border">#464646</color>
+
+
+	<color name="white">#ffffff</color>
+	<color name="black">#000000</color>
+	<color name="blue">#0000ff</color>
+
+	<!-- <color name="window_bg_color">#dae8f1</color> -->
+	<!-- <color name="window_bg_color">#e8e5ec</color> -->
+	<color name="window_bg_color">#ffffff</color>
+	<color name="hyperlink_text_color">#0188A7</color>
+	<color name="blue_gred_start_color">#398fc2</color>
+	<color name="blue_gred_end_color">#2f76a2</color>
+	<color name="red_gred_start_color">#d70000</color>
+	<color name="red_gred_end_color">#d80100</color>
+	<color name="edittext_bg_clor">#fafbfd</color>
+	<color name="edittext_border_clor">#c5d1df</color>
+	<color name="whitebox_border_color">#fafbfd</color>
+	<!-- /////////////////////////////////////////////////////// -->
+
+
+
+	<color name="button_border_color">#268d3e</color>
+	<color name="link_color">#3b5c9f</color>
+	<color name="notification_batch_color">#ff0000</color>
+	<color name="menu_nonselected_bg_color">#223254</color>
+	<color name="menu_selected_bg_color">#1b2946</color>
+	<color name="menu_selected_vertical_line_color">#fdd001</color>
+	<color name="menu_heading_bg_color">#313f5c</color>
+	<color name="menu_items_text_color">#ffffff</color>
+	<color name="menu_heads_text_color">#68748a</color>
+	<color name="home_gray_color">#5E697B</color>
+
+	<!-- Global Colors -->
+	<color name="head_bg_color">#5E697B</color>
+	<color name="actionabr_start_gredient_color">#3f67AC</color>
+	<color name="actionabr_end_gredient_color">#5483C7</color>
+	<color name="button_start_gredient_color">#64C32F</color>
+	<color name="button_end_gredient_color">#59AE2A</color>
+	<color name="rfq_link_color">#616161</color>
+	<color name="heading_text_color">#000000</color>
+	<color name="content_text_color">#616161</color>
+	<color name="box_color">#f1f1f1</color>
+
+	<color name="second_head_bg_color">#838383</color>
+
+	<!-- RFQ Section colors -->
+	<color name="thin_sep_line_color">#EDEDED</color>
+	<color name="dark_sep_line_color">#D9D6DD</color>
+	<color name="rfq_date_sep_bar_color">#A7A7A7</color>
+
+
+	<color name="deal_circular_color1">#9bd859</color>
+	<color name="deal_circular_color2">#ba7eb1</color>
+	<color name="deal_circular_color3">#ffbf3b</color>
+	<color name="deal_circular_color4">#00b0d2</color>
+	<color name="deal_circular_color5">#fe6567</color>
+
+	<!-- Delivery Address Color Codes  -->
+	<color name="NewGray">#F5F4F9</color>
+	<color name="grayBorder">#C1C4D6</color>
+	<color name="NewBlue">#369FDF</color>
+	<color name="NewGreen">#81B539</color>
+	<color name="Orange">#FFA500</color>
+	<color name="darkGrayText">#8e8e8f</color>
+	<color name="lightGrayBackground">#f4f4f8</color>
+
+	<!-- for chat module-->
+	<color name="colorPrimary1">#00BCD4</color>
+	<color name="colorPrimaryDark1">#0097A7</color>
+	<color name="colorAccent1">#009688</color>
+	<color name="myChatColor">#3F51B5</color>
+	<color name="clientChatColor">#00BCD4</color>
+</resources>

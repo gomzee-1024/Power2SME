@@ -1,0 +1,563 @@
+<resources>
+    <string name="app_name">Power2SME</string>
+    
+    <!-- GOOGLE ANALYTICS KEY ============================================ -->
+	<!--<string name="ga_tracking_id">UA-55083567-2</string>--><!-- for testing build -->
+    <string name="google_analytics_tracking_id">UA-34615023-2</string><!-- for release build -->
+	<string name="ga_screenname_TrackingMapActivity">Tracking Map Screen</string>
+	<string name="ga_screenname_SplashActivity">Splash Screen</string>
+	<string name="ga_screenname_ContainerActivity">Container Screen</string>
+
+	<string name="ga_screenname_AccountUpdatesFragment">Account Updates Screen</string>
+	<string name="ga_screenname_ContactInfoEditFragment">Edit Contact Details Screen</string>
+	<string name="ga_screenname_HomeFragment">Home Screen</string>
+	<string name="ga_screenname_DeliveryAddressesListFragment">Delivery Addresses Screen</string>
+	<string name="ga_screenname_DeliveryAddressesInsertFragment">Insert Delivery Address Screen</string>
+	<string name="ga_screenname_InterestedCustomerFragment">Interested Customer Screen</string>
+	<string name="ga_screenname_DealsFragment">Deals Screen</string>
+	<string name="ga_screenname_BuyingRFQsFragment">My RFQs Screen</string>
+	<string name="ga_screenname_AddRFQFragment">Add New RFQ Screen</string>
+	<string name="ga_screenname_ShipmentDetailsFragment">Shipment Details Screen</string>
+	<string name="ga_screenname_BuyingOrdersFragment">My Orders Screen</string>
+	<string name="ga_screenname_ServerErrorFragment">Server Error Screen</string>
+	<string name="ga_screenname_NoInternetFragment">No Internet Error Screen</string>
+	<string name="ga_screenname_MarketPlaceHomeFragment">Market Place Home Screen</string>
+	<string name="ga_screenname_LoginSignupFormFragment">Login Signup Form Screen</string>
+	<string name="ga_screenname_LoginFragment">Login Screen</string>
+	<string name="ga_screenname_WebBrowserFragment">Web Browser Screen</string>
+	<string name="ga_screenname_TermsAndConditionsFragment">Terms And Conditions Screen</string>
+	<string name="ga_screenname_RateThisAppFragment">Rate This App Screen</string>
+	<string name="ga_screenname_PrivacyPolicyFragment">Privacy Policy Screen</string>
+	<string name="ga_screenname_AboutUsFragment">About Us Screen</string>
+	<string name="ga_screenname_AboutP2SMEFragment">About P2SME Screen</string>
+	<string name="ga_screenname_SMENewsDetailsFragment">SME News Details Screen</string>
+	<string name="ga_screenname_SMEKhabarFragment">SME Khabar Screen</string>
+	<string name="ga_screenname_SignupFragment">Signup Screen</string>
+	<string name="ga_screenname_customers_selection">Select SME Screen</string>
+	<string name="ga_screenname_contactus">Contact Us Screen</string>
+
+
+    
+    <!-- FACEBOOK APP ID      ============================================ -->
+    <!-- <string name="facebook_app_id">380582945455055</string> --><!-- for testing build-->
+    <string name="facebook_app_id">917464548284081</string><!-- for release build-->
+    
+    <!-- MAP API KEY -->
+	<!--AIzaSyAQeazMOw336_eUsEDBLYBDe3Y6SulECvw-->
+    <string name="map_api_key">AIzaSyAQeazMOw336_eUsEDBLYBDe3Y6SulECvw</string><!-- for release build-->
+    <!--<string name="map_api_key">AIzaSyC48BY2RcrjhARLgq0qAjeYmohX5A6Nmrs</string>--><!-- for debug build-->
+
+	<!-- DRAWER MENU TITLES -->
+	<string name="drawer_menu_home">Home</string>
+	<string name="drawer_menu_login">Login/Register</string>
+	<string name="drawer_menu_signup">Signup</string>
+	<string name="drawer_menu_logout">Logout</string>
+	<string name="drawer_menu_contact_edit">Edit Contact Details</string>
+	<string name="drawer_menu_select_customer">Select Customer</string>
+	<string name="drawer_menu_contact_us">Contact Us</string>
+	<string name="drawer_menu_orders">My Orders</string>
+	<string name="drawer_menu_order_reorder">Re-Order</string>
+	<string name="drawer_menu_orders_details">My Orders Details</string>
+	<string name="drawer_menu_shipment_details">Shipment Details</string>
+	<string name="drawer_menu_updates">Account Updates</string>
+	<string name="drawer_menu_deals">Deals</string>
+	<string name="drawer_menu_deals_post_order">Take This Deal</string>
+	<string name="drawer_menu_about_power2sme">About Us</string>
+	<string name="drawer_menu_rate_this_app">Rate this App</string>
+	<string name="drawer_menu_sme_khabar">SME Khabar</string>
+	<string name="drawer_menu_terms_and_condition">Terms &amp; Conditions</string>
+	<string name="drawer_menu_rfq">My RFQs</string>
+	<string name="drawer_menu_rfq_add">Request for Quote</string>
+	<string name="drawer_menu_rfq_details">My RFQ Details</string>
+	<string name="drawer_menu_delivery_address_list">My Addresses</string>
+	<string name="drawer_menu_delivery_address_add">Add Delivery Address</string>
+	<string name="drawer_menu_delivery_address_update">Update Delivery Address</string>
+	<string name="drawer_menu_about_us">About Us</string>
+	<string name="drawer_menu_privacy_policy">Privacy Policy</string>
+	<string name="drawer_menu_market_place_home">Market Place</string>
+	<string name="drawer_menu_switch_customer">Switch Customer</string>
+
+
+
+    <!-- APP SCREEN TITLES ============================================ -->
+    <string name="screen_title_home">Home</string>
+    <string name="screen_title_login">Login</string>
+	<string name="screen_title_sign_in">SIGN IN</string>
+	<string name="screen_title_signup">SIGN UP</string>
+    <string name="screen_title_logout">Logout</string>
+	<string name="screen_title_contact_edit">Edit Contact Details</string>
+	<string name="screen_title_select_customer">Select Customer</string>
+    <string name="screen_title_contact_us">Contact Us</string>
+	<string name="interested_customer_contact_details">Deal : Express Interest</string>
+	<string name="screen_title_orders">My Orders</string>
+	<string name="screen_title_order_reorder">Re-Order</string>
+	<string name="screen_title_orders_details">My Orders Details</string>
+	<string name="screen_title_shipment_details">Shipment Details</string>
+	<string name="screen_title_updates">Account Updates</string>
+	<string name="screen_title_deals">Deals</string>
+	<string name="screen_title_deals_post_order">Take This Deal</string>
+	<string name="screen_title_about_power2sme">About Us</string>
+	<string name="screen_title_rate_this_app">Rate this App</string>
+	<string name="screen_title_sme_khabar">SME Khabar</string>
+	<string name="screen_title_terms_and_condition">Terms &amp; Conditions</string>
+	<string name="screen_title_rfq">My RFQs</string>
+	<string name="screen_title_rfq_add">Request for Quote</string>
+	<string name="screen_title_rfq_details">My RFQ Details</string>
+	<string name="screen_title_delivery_address_list">My Addresses</string>
+	<string name="screen_title_delivery_address_add">Add Delivery Address</string>
+	<string name="screen_title_delivery_address_update">Update Delivery Address</string>
+	<string name="screen_title_about_us">About Us</string>
+	<string name="screen_title_privacy_policy">Privacy Policy</string>
+    <string name="screen_title_market_place_home">Market Place</string>
+	<string name="screen_title_switch_customer">Switch Customer</string>
+
+	
+	<!-- APP FRAGMENTS ============================================ -->
+
+    <!--<string name="fragment_kam_details">com.power2sme.android.sections.contactupdate.farmerinfo.KAMDetailsFragment</string>
+    <string name="fragment_login">com.power2sme.android.sections.login.LoginSignupFormFragment</string>
+    <string name="fragment_home">com.power2sme.android.sections.home.HomeFragment</string>
+    <string name="fragment_nointernet">com.power2sme.android.sections.msgscreens.NoInternetFragment</string>
+    <string name="fragment_buying_rfq">com.power2sme.android.sections.myrfqs.list.BuyingRFQsFragment</string>
+    <string name="fragment_add_rfq">com.power2sme.android.sections.myrfqs.add.AddRFQFragment</string>
+    <string name="fragment_interested_customer">com.power2sme.android.sections.deals.list.InterestedCustomerFragment</string>
+    <string name="fragment_market_place">com.power2sme.android.sections.market.MarketPlaceHomeFragment</string>
+    <string name="fragment_buying_orders">com.power2sme.android.sections.myorders.list.BuyingOrdersFragment</string>
+    <string name="fragment_insert_delivery_address">com.power2sme.android.sections.deliveryaddress.insert.DeliveryAddressesInsertFragment</string>
+    <string name="fragment_shipment_details">com.power2sme.android.sections.myorders.shipmentdetails.ShipmentDetailsFragment</string>
+    <string name="fragment_account_updates">com.power2sme.android.sections.accountupdates.AccountUpdatesFragment</string>
+    <string name="fragment_contact_info_edit">com.power2sme.android.sections.contactupdate.ContactInfoEditFragment</string>
+    <string name="fragment_delivery_address_list">com.power2sme.android.sections.deliveryaddress.list.DeliveryAddressesListFragment</string>
+    <string name="fragment_deals">com.power2sme.android.sections.deals.list.DealsFragment</string>
+    <string name="fragment_smekhabar">com.power2sme.android.sections.smekhabar.SMEKhabarFragment</string>
+    <string name="fragment_about_us">com.power2sme.android.sections.settings.AboutUsFragment</string>
+    <string name="fragment_about_power2sme">com.power2sme.android.sections.settings.AboutP2SMEFragment</string>
+    <string name="fragment_privacy_policy">com.power2sme.android.sections.settings.PrivacyPolicyFragment</string>
+    <string name="fragment_terms_and_condition">com.power2sme.android.sections.settings.TermsAndConditionsFragment</string>
+    <string name="fragment_rate_this_app">com.power2sme.android.sections.settings.RateThisAppFragment</string>
+    <string name="fragment_sme_news_details">com.power2sme.android.sections.smekhabar.SMENewsDetailsFragment</string>
+    <string name="fragment_server_error">com.power2sme.android.sections.msgscreens.ServerErrorFragment</string>-->
+
+
+    <!-- Common Messages and Errors -->
+    <string name="server_error">Server Error, Please try again!</string>
+	<string name="network_not_available">Please Check your Internet Connection and Try Again!</string>
+	<string name="server_error_access_forbidden">You are not authorized, Please login again.</string>
+	<string name="records_not_found">Records not found!</string>
+	<string name="try_again">TRY AGAIN</string>
+	<string name="re_try">Retry</string>
+	<string name="you_have_not_done_any_transactions_with_us">You have not done any transactions with us</string>
+	<string name="please_contact_our_sales_if_you_can_not_see_your_rfq_here">No ongoing Quote requests. You can place one by tapping the button below.</string>
+	<string name="order_undelivered_list_empty_message">Looks like you haven\'t placed any orders yet.</string>
+	<string name="order_delivered_list_empty_message">No orders found satisfying this criteria</string>
+	<string name="empty_meesage_for_account_updates">Looks like you haven\'t done any transactions with us yet.</string>
+	<string name="no_result_found">No Result Found.</string>
+	<string name="user_delivery_address_message">Save your delivery locations to place your order faster!</string>
+	<string name="your_account_statement_will_be_sent_within_48_hours_">Your account statement will be sent within 48 hours.</string>
+    <string name="inr">\u20A8</string>
+	<string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="file_picker_regex_pattern">*/*</string>
+	<string name="image_capture_tmp_file_name">tmp.png</string>
+    <string name="please_wait">Please wait...</string>
+	<string name="contact_us">Contact Us</string>
+	<string name="change_password">Change Password</string>
+	<string name="auth_dlg_title_email_already_exist">Your email already exist, please login first!</string>
+	<string name="auth_dlg_title_session_expired_login_again">Your session has expired, please login again!</string>
+	<string name="logout_conformation_dlg_title">Do you want to logout?</string>
+
+	<string name="label_login">LOGIN</string>
+	<string name="label_cancel">CANCEL</string>
+	<string name="label_ok">OK</string>
+	<string name="label_continue">CONTINUE</string>
+
+
+
+	<!-- LOGIN SCREEN ====================================================== -->
+	<string name="social_logins_label">OR SIGN IN WITH </string>
+	<string name="login_hint_emailid">Email ID&#42;</string>
+	<string name="login_validationerror_emailid">Please enter valid email id.</string>
+	<string name="login_validationerror_empty_emailid">Please enter email id.</string>
+	<string name="login_hint_password">Password&#42;</string>
+	<string name="login_validationerror_password">Please enter valid password.</string>
+	<string name="login_validationerror_empty_password">Please enter password.</string>
+	<string name="login_response_error">Please check email and password.</string>
+	<string name="login_label_inputdialogmsg">Type Your Message :</string>
+	<string name="login_label_forgotpasswrd"><u>Forgot Password?</u></string>
+	<string name="login_button_google_login">"     LOG IN WITH GOOGLE"</string>
+    <string name="login_button_linkedin_login">"     LOG IN WITH LINKEDIN"</string>
+	<string name="login_button_facebook_login">"  LOG IN WITH FACEBOOK"</string>
+	<string name="error_forgot_password">Please Check your Internet Connection and Try Again!</string>
+	<string name="fb_login_error">Facebook user id or password is wrong, please try again.</string>
+	<string name="google_login_error">Google user id or password is wrong, please try again.</string>
+	<string name="please_enter_registered_email_id">Please enter registered Email-ID:</string>
+	<string name="chnage_password_label">Change Password:</string>
+	<string name="invalid_login_credentials">Please check your email-id / password</string>
+	<string name="invalid_username">Please enter valid email-id</string>
+	<string name="invalid_password">Email-Id or Passsword are not correct, please try again!</string>
+	<string name="signin_button_register">SIGN IN</string>
+	<string name="password_recovery_email_sent">Your password has been sent to your registered email. Please check your email</string>
+	<string name="signin_label_rememberme">" Remember me"</string>
+
+	<!-- SIGNUP SCREEN ====================================================== -->
+	<string name="signup_hint_mobile_number">Your 10 Digit Mobile Number</string>
+	<string name="signup_validationerror_mobile_number">Please enter 10 digit mobile number.</string>
+	<string name="signup_hint_emailid">Your Email ID&#42;</string>
+	<string name="signup_validationerror_emailid">Please enter email id.</string>
+	<string name="signup_response_error">Please Check your Internet Connection and Try Again!</string>
+	<string name="signup_response_emailalreadyregistered">Email id already registered!</string>
+	<string name="signup_success">Welcome to Power2SME, your password has been sent to your E-mail Id.</string>
+	<string name="signup_button_register">SIGN UP</string>
+	<string name="signup_contract_text">By clicking Sign Up, I agree to the <b><u>Terms of Service</u></b> and <b><u>Privacy Policy</u></b>.</string>
+	<string name="signup_contract_Terms_of_service_label">Terms of Service</string>
+	<string name="signup_contract_Privacy_policy_label">Privacy Policy</string>
+
+
+	<!-- ADD RFQ SCREEN ======================================================  -->
+	<string name="addrfq_button_contactinfo">Contact</string>
+	<string name="addrfq_button_itemdetails">Items</string>
+	<string name="addrfq_button_deliverydetails">Delivery</string>
+	<string name="addrfq_button_previous">" Previous"</string>
+	<string name="addrfq_button_next">"Next "</string>
+	<string name="addrfq_button_submit">SUBMIT</string>
+    <string name="addrfq_label_select_delivery_address">Select Delivery Address:</string>
+    <string name="addrfq_label_selected_delivery_address">Selected Delivery Address:</string>
+    <string name="addrfq_button_add_new_address">ADD NEW ADDRESS</string>
+    <string name="addrfq_button_select_address">SELECT ADDRESS</string>
+    <string name="addrfq_button_change_address">CHANGE ADDRESS</string>
+	<string name="addrfq_label_transport">Will you arrange transport yourself?</string>
+	<string name="addrfq_label_form_c">Will you provide form C?</string>
+	<string name="addrfq_hint_companyname">Your Company Name&#42;</string>
+	<string name="addrfq_hint_fullname">Your Full Name</string>
+	<string name="editcontact_hint_fullname">Your Full Name&#42;</string>
+	<string name="addrfq_hint_mobilenumber">Your 10 Digit Mobile Number&#42;</string>
+	<string name="addrfq_hint_emailid">Your Email ID&#42;</string>
+	<string name="addrfq_hint_material_category">Select Material&#42;</string>
+	<string name="addrfq_hint_sku_category">Select Category&#42;</string>
+	<string name="addrfq_hint_sku_sub_category">Select Subcategory</string>
+	<string name="addrfq_hint_material_specification">Item details&#42;</string>
+	<string name="addrfq_hint_material_quantity">Quantity&#42;</string>
+	<string name="addrfq_hint_material_units">Measuring Units&#42;</string>
+	<string name="addrfq_hint_taxpreferences">Select Billing &amp; Tax Preferences&#42;</string>
+	<string name="addrfq_hint_urgency">Select Delivery Time-frame&#42;</string>
+	<string name="addrfq_hint_address_line1">Address Line 1&#42;</string>
+	<string name="addrfq_hint_address_line2">Address Line 2</string>
+	<string name="addrfq_hint_pincode">Pincode&#42;</string>
+	<string name="addrfq_validationerror_no_items">Please add atleast one item to continue...</string>
+	<string name="addrfq_validationerror_companyname">Please enter company name.</string>
+	<string name="addrfq_validationerror_fullname">Please enter full name.</string>
+	<string name="addrfq_validationerror_mobilenumber">Please enter 10 digit mobile number.</string>
+	<string name="addrfq_validationerror_emailid">Please enter email id.</string>
+	<string name="addrfq_validationerror_material_category">Please select material type.</string>
+	<string name="addrfq_validationerror_select_category_first">Please Select category first.</string>
+
+	<string name="addrfq_validationerror_material_specification">Please enter material specifications.</string>
+	<string name="addrfq_validationerror_material_quantity">Please enter valid quantity.</string>
+	<string name="addrfq_validationerror_material_units">Please select measuring units.</string>
+	<string name="addrfq_validationerror_taxpreferences">Please select billing &amp; tax preferences.</string>
+	<string name="addrfq_validationerror_ungency">Please select Time-frame.</string>
+	<string name="addrfq_validationerror_address_line1">Please enter address line 1.</string>
+	<string name="addrfq_validationerror_pincode">Please enter valid pincode.</string>
+	<string name="addrfq_validationerror_deliveryaddress">Please select delivery address.</string>
+	<string name="addrfq_label_tap_to_select_deliveryaddress">Tap To Select Delivery Address:</string>
+	<string name="addrfq_error">Please Check your Internet Connection and Try Again!</string>
+	<string name="addrfq_success">Thank you! Our Sales team will contact you shortly</string>
+	<string name="addrfq_upload_po_dlg_msg">Deal applied successfully, Please upload PO</string>
+	<string name="addrfq_units_of_measure_dialog_error">Please Check your Internet Connection and Try Again!</string>
+	<string name="addrfq_material_category_dialog_error">Please Check your Internet Connection and Try Again!</string>
+	<string name="addrfq_urgency_list_download_error">Urgency List not loaded, please try again.</string>
+	<string name="addrfq_taxation_prefs_list_download_error">Taxation Preference List not loaded, please try again.</string>
+    <string name="addrfq_label_qty_below_MOQ_dlg_title">Entered quantity is less than required minimum quantity for availing this deal, continue without this deal?</string>
+    <string name="addrfq_label_deals_description_title">Deal Details</string>
+
+	<string name="addrfq_sku_fetch_error">Please Check your Internet Connection and Try Again!</string>
+	<string name="addrfq_sku_sub_category_fetch_error">Please Check your Internet Connection and Try Again!</string>
+	<string name="addrfq_sku_category_fetch_error">Please Check your Internet Connection and Try Again!</string>
+
+	<!-- KAM-->
+	<string name="kam_hint_customer_emailid">Customer Email ID&#42;</string>
+
+	<!-- CONTACT UPDATE SCREEN ======================================================  -->
+	<string name="contactupdate_hint_companyname">Your Company Name&#42;</string>
+	<string name="contactupdate_hint_fullname">Your Full Name&#42;</string>
+	<string name="contactupdate_hint_contactnumber">Contact Number&#42;</string>
+	<string name="contactupdate_hint_emailid">Your Email ID&#42;</string>
+	<string name="contactupdate_hint_street">Street</string>
+	<string name="contactupdate_hint_city">City</string>
+	<string name="contactupdate_hint_state">State</string>
+	<string name="contactupdate_hint_pincode">Pincode&#42;</string>
+	<string name="contactupdate_hint_phone">Phone</string>
+	<string name="contactupdate_hint_designation">Select Designation</string>
+	<string name="contactupdate_hint_department">Department</string>
+	<string name="contactupdate_validationerror_companyname">Please enter company name.</string>
+	<string name="contactupdate_validationerror_email">Please enter email.</string>
+	<string name="contactupdate_validationerror_fullname">Please enter full name.</string>
+	<string name="contactupdate_validationerror_mobilenumber">Please enter 10 digit mobile number.</string>
+	<string name="contactupdate_validationerror_address1">Please enter address line 1.</string>
+	<string name="contactupdate_validationerror_pincode">Please enter valid pincode.</string>
+	<string name="contactupdate_edit_success">Thank you for keeping us updated!</string>
+    <string name="contactupdate_edit_error">Please Check your Internet Connection and Try Again!</string>
+    <string name="contactupdate_display_error">Please Check your Internet Connection and Try Again!</string>
+    <string name="contactupdate_designation_loading_error">Designations loading failed.</string>
+    <string name="select_designation">Select Designation</string>
+    <string name="contactupdate_button_update">UPDATE</string>
+	<string name="password_change_success">Password changed successfully</string>
+	<string name="password_change_error">Wrong Credentails, Please try again</string>
+	<string name="please_enter_old_password">Please enter old password</string>
+	<string name="please_enter_new_password">Please enter new password</string>
+	<string name="please_confirm_password">Please confirm password</string>
+	<string name="password_not_matched">Password not matched</string>
+	<string name="password_must_be_minimum_6_characters">Password must be minimum 6 characters</string>
+	<string name="password_must_be_alphanumeric_only">Password can have A-Z, a-z and 0-9 only.</string>
+	<string name="label_edit_address">Edit Address</string>
+    <string name="label_edit_personal_info">Edit Personal Info</string>
+	<!-- My ORDERS SCREEN ======================================================  -->
+	<string name="myorders_hint_searchquery">Enter Order ID</string>
+	<string name="myorders_validationerror_searchquery">Please enter order id.</string>
+	<string name="myorders_label_orderid">"Order No.: "</string>
+	<string name="myorders_label_date">"Date: "</string>
+	<string name="myorders_label_taxation">"Taxation: "</string>
+	<string name="myorders_label_total">"TOTAL: "</string>
+	<string name="myorders_label_status">"Status: "</string>
+
+	<string name="myorders_button_shipmentdetail">SHIPMENT DETAILS</string>
+	<string name="myorders_button_reorder">REORDER</string>
+	<string name="myorders_button_viewShipmentLocation">TRACK ORDER</string>
+	<string name="myorders_retrieval_error">Please Check your Internet Connection and Try Again!</string>
+	<string name="myorders_not_found">Orders not found!</string>
+	<string name="myorder_search_error">Network problem, Orders not found!</string>
+    <string name="myorder_search_not_found">Order ID %$1s; not found!</string>
+    <string name="myorder_detail_error">Please Check your Internet Connection and Try Again!</string>
+    <string name="myorder_truck_tracking_error">Please try after some time.</string>
+    <string name="myorder_label_uploadpodialog">Select a file</string>
+    <string name="myorders_orderstate_delivery_in_progress">Delivery in Progress</string>
+    <string name="myorders_orderstate_delivered">Delivered</string>
+    <string name="myorders_orderstate_to_be_shipped">To be Shipped</string>
+    
+    
+	<!-- SHIPMENT DETAILS SCREEN ======================================================  -->
+	<string name="shipmentdetails_label_orderid">"Order ID: "</string>
+	<string name="shipmentdetails_label_orderdate">"Order Date: "</string>
+	<string name="shipmentdetails_label_totalamount">"Total Amount: "</string>
+	<string name="shipmentdetails_label_outstanding">"Outstanding: "</string>
+	<string name="shipmentdetails_label_duedate">"Due Date: "</string>
+	<string name="shipmentdetails_label_status">"Status: "</string>
+	<string name="shipmentdetails_label_invoicenumber">"Invoice: "</string>
+	<string name="shipmentdetails_label_quantity">"Quantity: "</string>
+	<string name="shipmentdetails_label_rate">"Rate: "</string>
+	<string name="shipmentdetails_label_shipmentdate">"Shipment Date: "</string>
+	<string name="shipmentdetails_label_vehicleno">"Vehicle No.: "</string>
+	<string name="shipmentdetails_label_driversname">"Driver's Name: "</string>
+	<string name="shipmentdetails_label_phone">"Phone: "</string>
+	<string name="shipmentdetails_error">Please Check your Internet Connection and Try Again!</string>
+    <string name="shipmentdetails_not_found">Please enter a Delivery Address</string>
+    
+	<!-- My RFQs SCREEN ======================================================  -->
+	<string name="myrfqs_label_rfqid">"RFQ ID: "</string>
+	<string name="myrfqs_label_rfqdate">"RFQ Date: "</string>
+	<string name="myrfqs_label_quoteid">"Quote ID: "</string>
+	<string name="myrfqs_label_quotedate">"Quote Date: "</string>
+	<string name="myrfqs_label_taxation">"Taxation: "</string>
+	<string name="myrfqs_label_total">"Total: "</string>
+	<string name="myrfqs_label_status">"Status: "</string>
+	<string name="myrfqs_button_calus">CALL US</string>
+	<string name="myrfqs_button_accept">ACCEPT</string>
+	<string name="myrfqs_button_uploadpo">UPLOAD PO</string>
+	<string name="error_occured_in_capturing_image_from_camera_">Could not get the photo. Please try again!</string>
+	<string name="error_occured_in_picking_file_from_file_chooser_">Please select the File again!</string>
+	<string name="myrfqs_accept_quote_success">Thank you! We have started processing your Order</string>
+    <string name="myrfqs_accept_quote_error">Please Check your Internet Connection and Try Again!</string>
+    <string name="myrfqs_request_quote_success">Request taken! Our Sales team will contact you shortly</string>
+    <string name="myrfqs_request_quote_error">Please Check your Internet Connection and Try Again!</string>
+    <string name="myrfqs_retrieval_error">Please Check your Internet Connection and Try Again!</string>
+    <string name="myrfqs_no_rfqs">If you can not see your RFQ here please contact our sales team</string>
+    <string name="myrfqs_po_upload_success">Your PO has been received and the Order is being processed.</string>
+    <string name="myrfqs_po_upload_error">Please Check your Internet Connection and Try Again!</string>
+    <string name="myrfqs_details_error">Please Check your Internet Connection and Try Again!</string>
+    
+	<!-- Deals SCREEN ======================================================  -->
+	<string name="deals_label_activedeals">Active Deals</string>
+	<string name="deals_label_upcomingdeals">Upcoming Deals</string>
+	<string name="deals_label_expireddeals">Expired Deals</string>
+	<string name="deals_label_grade">"Grade: "</string>
+	<string name="deals_label_brand">"Brand: "</string>
+	<string name="deals_label_rate">"Rate"</string>
+
+	<string name="deals_not_found">Please check for new deals after some time</string>
+	<string name="price_on_request">Price on Request</string>
+	<string name="deals_order_post_success">Thank you! Our Sales team will contact you shortly</string>
+    <string name="deals_order_post_error">Please Check your Internet Connection and Try Again!</string>
+    <string name="deals_filter_hint_searchquery">"Filter Deals"</string>
+    <string name="deals_till_stock_last_msg">*till stocks last.</string>
+	<string name="deals_button_upload_po_now">UPLOAD PO NOW</string>
+	<string name="deals_button_i_am_interested">I AM INTERESTED</string>
+	<string name="deals_label_filter_result_count">Search Results : </string>
+	<string name="deals_label_view_all">View All</string>
+	<string name="deals_validation_enter_your_query_here">Please enter your query here</string>
+
+
+
+    
+	<!-- ADD SHIPPING ADDRESS SCREEN ======================================================  -->
+	<string name="addshippingaddress_label_locationname">"Easy Name: "</string>
+	<string name="addshippingaddress_hint_addressline1">Address Line 1&#42;</string>
+	<string name="addshippingaddress_hint_addressline2">Address Line 2</string>
+	<string name="addshippingaddress_hint_pincode">Pincode&#42;</string>
+	<string name="addshippingaddress_validationerror_locationname">Easy Name will help you select this address later.</string>
+	<string name="addshippingaddress_validationerror_locationname_max_10digit_allowed">maximum 10 characters allowed and it should be unique.</string>
+	<string name="addshippingaddress_validationerror_addressline1">Please enter address line 1.</string>
+	<string name="addshippingaddress_validationerror_addressline2">Please enter address line 2.</string>
+	<string name="addshippingaddress_validationerror_pincode">Please enter valid pincode.</string>
+	<string name="addshippingaddress_button_save">SAVE</string>
+	<string name="delivery_address_insert_success">Thank you for telling us your new Delivery Address</string>
+    <string name="delivery_address_insert_error">Please Check your Internet Connection and Try Again!</string>
+	<string name="delivery_address_retreival_error">Please Check your Internet Connection and Try Again!</string>
+    <string name="delivery_address_not_available">Please add a delivery address first</string>
+	<string name="addshippingaddress_button_submit">SUBMIT</string>
+	<string name="delivery_address_delete_error">Ooops, Something went wrong, Please try after some time.</string>
+	<string name="delivery_address_delete_success">Delevery address deleted successfully</string>
+	<string name="update_delivery_address_success">Delevery address updated successfully</string>
+	<string name="update_delivery_address_error">Ooops, Something went wrong, Please try after some time.</string>
+
+	<!-- HOME SCREEN ======================================================  -->
+	<string name="home_label_outstanding">"OUTSTANDING: "</string>
+	<string name="home_label_requestaccuntstatement">Request Account Statement</string>
+	<string name="home_label_accountupdates">ACCOUNT UPDATES</string>
+	<string name="home_label_deals">DEALS</string>
+	<string name="home_label_latestsmekhabar">LATEST SME KHABAR</string>
+	<string name="home_label_viewall">"View All "</string>
+	<string name="view_all_order">View All Orders</string>
+
+    <string name="home_label_section_account_updates_display_error">Account Updates Downloading Failed</string>
+    <string name="home_label_section_deals_display_error">Deals Downloading Failed</string>
+    <string name="home_label_section_news_display_error">SME Khabar Downloading Failed</string>
+
+    <string name="home_label_section_account_updates_not_available">Account Updates not available</string>
+    <string name="home_label_section_deals_not_available">Deals not available</string>
+    <string name="home_label_section_news_not_available">SME Khabar not available</string>
+
+	<string name="home_validationerror_accountupdates_notavailable">Account updates not available.</string>
+	<string name="home_validationerror_accountupdates_servererror">Please Check your Internet Connection and Try Again!</string>
+	<string name="home_validationerror_news_notavailable">SME Khabar not available.</string>
+	<string name="home_validationerror_news_servererror">Please Check your Internet Connection and Try Again!</string>
+	<string name="home_logout_success">Yout have logout successfully.</string>
+	<string name="home_logout_error">Please Check your Internet Connection and Try Again</string>
+	<string name="home_button_request_a_quote">REQUEST FOR QUOTE</string>
+
+	
+	<!-- ABOUT US SCREEN ======================================================  -->
+	<string name="aboutus_label_aboutp2s">About Power2SME</string>
+	<string name="aboutus_label_privacypolicy">Privacy Policy</string>
+	<string name="aboutus_label_termsandcondition">Terms And Conditions</string>
+	<string name="aboutus_label_ratethisapp">Rate This App</string>
+	
+	<!-- SME KHABAR ====================================================== -->
+	<string name="more_news_pages_not_found">Thats all!</string>
+	<string name="sme_news_retreival_error">Please Check your Internet Connection and Try Again!</string>
+	
+	<!-- ACCOUNT UPDATES ======================================================  -->
+	<string name="accountupdates_retrieval_error">Please Check your Internet Connection and Try Again!</string>
+    <string name="accountupdates_not_available">Account updates not available</string>
+
+
+	<!-- KAM login-->
+	<string name="login_to_choose_sme">Please login to choose your SMEs</string>
+	<string name="agent_customer_selection_error">Please Check your Internet Connection and Try Again!</string>
+	<string name="agent_actbehalfof_customer_error">Please Check your Internet Connection and Try Again!</string>
+	<string name="customers_not_found">No relevant SME\'s found. Please try another search option.</string>
+
+
+	<!--                        NEW FLOW                            -->
+	<string name="p2s_message_type_success">SUCCESS</string>
+	<string name="p2s_message_type_error">ERROR</string>
+	<string name="p2s_message_type_debug">DEBUG</string>
+	<string name="p2s_message_type_warning">WARNING</string>
+	<string name="p2s_message_type_info">INFO</string>
+	<string name="p2s_message_type_unauthorize">UNAUTHORIZE</string>
+	<string name="p2s_message_type_emailAlreadyExist">EMAIL_ALREADY_EXIST</string>
+	<string name="p2s_message_type_serverError">SERVER_ERROR</string>
+	<string name="p2s_message_type_networkNotAvailable">NETWORK_NOT_AVAILABLE</string>
+	<string name="p2s_message_type_dialogOK">DIALOG_OK</string>
+	<string name="p2s_message_type_dialiogOKBack">DIALOG_OK_BACK</string>
+	<string name="contactus_page_heading">Your KAM Details</string>
+
+	<!-- App Update Dialog ====================================================== -->
+	<string name="updator_dlg_title">App Update Available!</string>
+	<string name="updator_dlg_force_message">You must install the latest version in order to continue.</string>
+	<string name="updator_dlg_suggest_message">Please install the latest version for a better experience.</string>
+	<string name="updator_dlg_pos_btn">UPDATE</string>
+	<string name="updator_dlg_force_neg_btn">EXIT</string>
+	<string name="updator_dlg_suggest_neg_btn">UPDATE LATER</string>
+
+
+	<!-- *******************SHIPMENT DETAILS********************* -->
+	<string name="shipment_details_list_item_orderid_label">"Order No.: "</string>
+	<string name="shipment_details_list_item_orderDate_label">"Order Date: "</string>
+	<string name="shipment_details_list_item_currentLocation_label">"Current Location : "</string>
+	<string name="shipment_details_list_item_shipment_startDate_label">"Shipment started on : "</string>
+	<string name="shipment_details_list_item_shipment_estimatedDistance_label">"Estimated Distance : "</string>
+	<string name="shipment_details_list_item_button_locateonmap_label"><h3>Locate\n</h3> <h1>ON MAP</h1></string>
+	<string name="kam_search_hint_email_id">Enter SME\'s Email ID</string>
+	<string name="kam_search_hint_company_name">Enter company name</string>
+	<string name="kam_search_hint_mobile_number">Enter SME\'s mobile number</string>
+	<string name="kam_search_hint_sme_id">Enter SME ID</string>
+	<string name="kam_search_validation_email_empty">Please enter email ID</string>
+	<string name="kam_search_validation_email_invalid">Please enter valid email ID</string>
+	<string name="kam_search_validation_organization_empty">Please enter organization name</string>
+	<string name="kam_search_validation_organization_invalidchars">Allowed characters are \" a-z, A-Z, @, _, -, ., 0-9\"</string>
+	<string name="kam_search_validation_mobile_empty">Please enter mobile number</string>
+	<string name="kam_search_validation_mobile_invalid">Please enter valid mobile number</string>
+	<string name="kam_search_validation_smeid_empty">Please enter SME ID</string>
+	<string name="kam_search_validation_smeid_invalid">Please enter numbers and alphabets only</string>
+	<string name="kam_search_dlg_title">"Logging in as %1$s"</string>
+	<string name="kam_search_dlg_message">You are about to login as  %1$s. Press \"OK\" to continue, else press \"CANCEL\" to return to SME selection.</string>
+	<string name="kam_search_label_last_10_transacted_customers">Associated Customers</string>
+	<string name="kam_search_label_search_results">SEARCH RESULTS</string>
+
+	<!-- Splash Screen =============================================-->
+	<string name="splash_domain_selector_dialog_help">Format: http://&lt;host&gt;:&lt;string&gt;/&lt;Prefix before /verNumber&gt;\nEg. Http://192.168.1.12:8080/p2sapi</string>
+	<string name="splash_domain_selector_dialog_edittext_hint">Enter URL as in given format</string>
+	<string name="splash_domain_selector_dialog_rediobutton_live">Live</string>
+	<string name="splash_domain_selector_dialog_rediobutton_uat">UAT</string>
+	<string name="splash_domain_selector_dialog_rediobutton_custom">Custom</string>
+	<string name="splash_domain_selector_dialog_validation_error">Please enter a valid URL</string>
+	<string name="no_internet_access">Check your connection and try again.</string>
+
+
+	<!-- Permissions Messages -->
+	<string name="permission_msg_account">We need access to \'Accounts\' permission to auto-suggest email-ids in forms. Please allow in upcoming permission dialog.</string>
+	<string name="permission_msg_storage">Upload PO functionality requires Camera and Storage permissions. Please allow in upcoming permission dialogs.</string>
+	<string name="permission_msg_camera">Upload PO functionality requires Camera and Storage permissions. Please allow in upcoming permission dialogs.</string>
+	<string name="permission_msg_kamcall">We need access to Call permission to enable Contact/Call Us functionality. Please allow in upcoming permission dialog.</string>
+	<string name="permission_msg_location">We need access to Location permission to provide order tracking information on a Map. Please allow in upcoming permission dialog.</string>
+
+
+	<string name="permission_open_settings">Setting</string>
+
+	<string name="kamdetails_kamcall_call_permission_retry_msg">Hit Allow to get in touch with us</string>
+	<string name="kamdetails_kamcall_call_permission_disable_msg">Please enable Phone permission in App settings</string>
+	<string name="drawermenu_kamcall_call_permission_retry_msg">Hit Allow to get in touch with us</string>
+	<string name="drawermenu_kamcall_call_permission_disable_msg">Please enable Phone permission in App settings</string>
+	<string name="login_emailsuggession_account_permission_retry_msg">Hit Allow to get suggestion(s) for Email ID</string>
+	<!--<string name="login_latlongdeviceregister_location_permission_retry_msg">Please remove this</string>-->
+	<string name="interestedondeals_emailsuggession_account_permission_retry_msg">Hit Allow to get suggestion(s) for Email ID</string>
+	<!--<string name="interestedondeals_latlongdeviceregister_location_permission_retry_msg">Please remove this</string>-->
+	<!--<string name="order_tracking_location_permission_retry_msg">Why do we need this?</string>
+	<string name="order_tracking_location_permission_disabled_msg">Why do we need this?</string>-->
+	<!--<string name="addrfq_latlongdeviceregister_location_permission_retry_msg">Please remove this</string>-->
+	<string name="addrfq_emailsuggession_account_permission_retry_msg">Hit Allow to get suggestion(s) for Email ID</string>
+	<string name="rfqlist_poupload_camera_permission_retry_msg">Hit Allow to enable PO upload via Camera</string>
+	<string name="rfqlist_poupload_camera_permission_disabled_msg">Please enable Camera permission in App settings</string>
+	<string name="rfqlist_poupload_storage_permission_retry_msg">Hit Allow to enable PO upload from storage</string>
+	<string name="rfqlist_poupload_storage_permission_disabled_msg">Please enable Storage permission in App settings</string>
+
+	<string name="rfqlist_poupload_recordaudio_permission_retry_msg">Hit Allow to enable PO Upload though Camera</string>
+	<string name="rfqlist_poupload_recordaudio_permission_disabled_msg">Please enable Camera permission in App settings</string>
+
+	<string name="rfqlist_kamcall_call_permission_retry_msg">Hit Allow to get in touch with us</string>
+	<string name="rfqlist_kamcall_call_permission_disable_msg">Please enable Phone permission in App settings</string>
+	<string name="signup_emailsuggession_account_permission_retry_msg">Hit Allow to get suggestion(s) for Email ID</string>
+	<!--<string name="signup_latlongdeviceregister_location_permission_retry_msg">Please remove this</string>-->
+
+
+</resources>

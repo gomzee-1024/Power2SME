@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg_color"
+    android:orientation="vertical">
+
+    <com.malinskiy.superrecyclerview.SuperRecyclerView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ListView_smeKhabar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_empty="@layout/news_list_empty_view"
+        app:layout_moreProgress="@layout/load_more_footer"
+        app:recyclerClipToPadding="false"
+        app:scrollbarStyle="outsideOverlay"></com.malinskiy.superrecyclerview.SuperRecyclerView>
+
+    <include
+        android:id="@+id/no_connection"
+        layout="@layout/no_internet_connection_view"
+        android:visibility="gone" />
+</LinearLayout>

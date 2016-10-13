@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="200dip">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_network"
+            />
+
+        <TextView
+            android:id="@+id/TextView_noInternetMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check your connection and try again."
+            style="@style/Style_TextView_Subhead1"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/space_between_two_vertical_component"/>
+
+        <Button
+            android:id="@+id/Button_retryForInternet"
+            android:layout_width="wrap_content"
+            android:text="@string/re_try"
+            android:layout_marginTop="@dimen/space_between_two_vertical_component"
+            style="@style/Style_Button_SquareYellow"
+            android:layout_marginLeft="@dimen/page_left_padding"
+            android:layout_marginRight="@dimen/page_right_padding"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+
+

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/page_left_padding"
+        android:layout_marginRight="0dip"
+        android:layout_marginTop="@dimen/page_top_padding">
+
+        <View
+            android:id="@+id/imageView1_spaceHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/ImageButton_removeRFQItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:paddingRight="@dimen/page_right_padding"
+            android:src="@drawable/close"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/materialParentRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/page_left_padding"
+        android:layout_marginRight="@dimen/page_right_padding"
+        android:layout_marginTop="@dimen/space_between_two_vertical_component"
+        >
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TextInputLayout_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.power2sme.android.utilities.customviews.BetterSpinner
+                android:id="@+id/Spinner_material"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/addrfq_hint_sku_category"
+                android:imeOptions="actionNext"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+        </android.support.design.widget.TextInputLayout>
+        <ProgressBar
+            android:id="@+id/ProgressBar_materialLoader"
+            style="@style/Style_ProgressBar"
+            android:layout_width="@dimen/progressbar_in_txtfield_height_width"
+            android:layout_height="@dimen/progressbar_in_txtfield_height_width"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/materialSubCategoryParentRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/page_left_padding"
+        android:layout_marginRight="@dimen/page_right_padding"
+        android:layout_marginTop="@dimen/space_between_two_vertical_component"
+        android:visibility="gone"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TextInputLayout_subCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.power2sme.android.utilities.customviews.BetterSpinner
+                android:id="@+id/Spinner_materialSubCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/addrfq_hint_sku_sub_category"
+                android:imeOptions="actionNext"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <ProgressBar
+            android:id="@+id/ProgressBar_materialSubCategoryLoader"
+            style="@style/Style_ProgressBar"
+            android:layout_width="@dimen/progressbar_in_txtfield_height_width"
+            android:layout_height="@dimen/progressbar_in_txtfield_height_width"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/materialSpecificationParentRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/page_left_padding"
+        android:layout_marginRight="@dimen/page_right_padding"
+        android:layout_marginTop="@dimen/space_between_two_vertical_component"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TextInputLayout_itemDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/AutoCompleteTextView_materialSpecification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/addrfq_hint_material_specification"
+                android:imeOptions="actionNext"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <ProgressBar
+            android:id="@+id/ProgressBar_materialSpecificationLoader"
+            style="@style/Style_ProgressBar"
+            android:layout_width="@dimen/progressbar_in_txtfield_height_width"
+            android:layout_height="@dimen/progressbar_in_txtfield_height_width"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_above_divider"
+        android:layout_marginLeft="@dimen/page_left_padding"
+        android:layout_marginRight="@dimen/page_right_padding"
+        android:layout_marginTop="@dimen/space_between_two_vertical_component"
+        android:gravity="bottom"
+        android:weightSum="2">
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="top">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/TextInputLayout_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/EditText_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/addrfq_hint_material_quantity"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal|textNoSuggestions"
+                    android:singleLine="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/unitOfMeasureParentRL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="top"
+            >
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/TextInputLayout_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.power2sme.android.utilities.customviews.BetterSpinner
+                    android:id="@+id/Spinner_unitOfMeasure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/addrfq_hint_material_units"
+                    android:imeOptions="actionNext"
+                    android:inputType="textNoSuggestions"
+                    android:singleLine="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <ProgressBar
+                android:id="@+id/ProgressBar_unitOfMeasureLoader"
+                style="@style/Style_ProgressBar"
+                android:layout_width="@dimen/progressbar_in_txtfield_height_width"
+                android:layout_height="@dimen/progressbar_in_txtfield_height_width"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/View_divider"
+        style="@style/Style_View_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        />
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/window_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_searchViewParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grayBorder"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/search_edittext_padding"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/EditText_searchQuery"
+            style="@style/Style_EditText_search_myorders"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="@string/myorders_hint_searchquery"
+            android:imeOptions="actionSearch"
+            android:inputType="textCapCharacters"
+            android:paddingLeft="@dimen/space_below_divider"
+            android:singleLine="true"
+            android:textColorHint="@color/section_dividers" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_search_myorders"
+            style="@style/Style_SearchImageButtonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/ImageView_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingBottom="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="5dip"
+                android:src="@drawable/ic_action_search" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_viewAllMyOrdersParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dip"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/TextView_viewAllMyOrders"
+            style="@style/Style_TextView_body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/small_single_arrow"
+            android:text="@string/view_all_order" />
+    </LinearLayout>
+
+    <com.malinskiy.superrecyclerview.SuperRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ListView_orders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_empty="@layout/news_list_empty_view"
+        app:layout_moreProgress="@layout/load_more_footer"
+        app:recyclerClipToPadding="false"
+        app:scrollbarStyle="outsideOverlay" />
+
+    <include
+        android:id="@+id/no_connection"
+        layout="@layout/no_internet_connection_view"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout_rfqItems"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    android:paddingTop="5dip"
+    android:gravity="center_vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/TextView_item"
+            style="@style/p2s_46_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LDPE C7700"
+            />
+        <TextView
+            android:id="@+id/TextView_brand"
+            style="@style/p2s_46_gray_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Polymer Asia"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/TextView_quantity"
+            style="@style/p2s_36_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="272727.0"
+            />
+        <TextView
+            android:id="@+id/TextView_unit"
+            style="@style/p2s_36_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KG"
+            android:layout_marginLeft="5dip"
+            />
+        <TextView
+            android:id="@+id/TextView_unitPrice"
+            style="@style/p2s_36_gray_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(@20000.00)"
+            android:layout_marginLeft="5dip"
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/TextView_itemPrice"
+            style="@style/p2s_30_black_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INR 19,777.00"
+            />
+    </LinearLayout>
+
+<!--
+    <TextView
+        android:id="@+id/TextView_item"
+        style="@style/Style_TextView_body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text=""
+         />
+    
+   <TextView
+       android:paddingLeft="10dp"
+        android:id="@+id/TextView_total"
+        style="@style/Style_TextView_body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="right"
+        android:text=""
+        />-->
+   
+</LinearLayout>

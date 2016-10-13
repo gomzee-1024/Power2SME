@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/sysadmin/AndroidStudioProjects/Power2SME/AFileChooser/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_provider.png",
+        "source": "/home/sysadmin/AndroidStudioProjects/Power2SME/AFileChooser/src/main/res/drawable-xxhdpi/ic_provider.png"
+    },
+    {
+        "merged": "/home/sysadmin/AndroidStudioProjects/Power2SME/AFileChooser/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_chooser.png",
+        "source": "/home/sysadmin/AndroidStudioProjects/Power2SME/AFileChooser/src/main/res/drawable-xxhdpi/ic_chooser.png"
+    },
+    {
+        "merged": "/home/sysadmin/AndroidStudioProjects/Power2SME/AFileChooser/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_folder.png",
+        "source": "/home/sysadmin/AndroidStudioProjects/Power2SME/AFileChooser/src/main/res/drawable-xxhdpi/ic_folder.png"
+    },
+    {
+        "merged": "/home/sysadmin/AndroidStudioProjects/Power2SME/AFileChooser/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_file.png",
+        "source": "/home/sysadmin/AndroidStudioProjects/Power2SME/AFileChooser/src/main/res/drawable-xxhdpi/ic_file.png"
+    }
+]

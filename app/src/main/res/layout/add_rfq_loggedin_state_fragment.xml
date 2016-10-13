@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg_color">
+    <LinearLayout
+        android:id="@+id/preNexBtnPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/dividers"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:background="@color/colorWhite">
+
+            <LinearLayout
+                android:id="@+id/LL3"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/Button_previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/previous_arrow"
+                    android:textColor="@color/accent1"
+                    android:text="@string/addrfq_button_previous" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@color/dividers"
+                />
+
+            <LinearLayout
+                android:id="@+id/LL4"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/Button_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="@string/addrfq_button_submit"
+                    android:textColor="@color/accent1"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/Button_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableRight="@drawable/next_arrow"
+                    android:text="@string/addrfq_button_next"
+                    android:textColor="@color/accent1"
+                    android:visibility="visible"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/preNexBtnPanel">
+        <LinearLayout
+            android:id="@+id/tabsParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TableLayout
+                android:id="@+id/TableLayout_state1Parent"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:stretchColumns="0" >
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout_state1spaceHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/accent1"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout_state1pointerParent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/accent2"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/ImageView_state1pointer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/addrfq_blue_arrow" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_state2Parent"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:stretchColumns="0" >
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout_state2spaceHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/accent2"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout_state2pointerParent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/accent1"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/ImageView_state2pointer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/addrfq_yellow_arrow" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_state3Parent"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:stretchColumns="0" >
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout_state3spaceHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/accent1"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout_state3pointerParent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/accent1"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/ImageView_state3pointer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/addrfq_yellow_arrow"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tabsParent"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/TextView_contactInfoTabLabel"
+                style="@style/Style_TextView_body1_WhiteTextColor"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="8dip"
+                android:text="@string/addrfq_button_contactinfo"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/TextView_itemDetailsTabLabel"
+                style="@style/Style_TextView_body1_WhiteTextColor"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/addrfq_button_itemdetails"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/TextView_deliveryDetailsTabLabel"
+                style="@style/Style_TextView_body1_WhiteTextColor"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="5dip"
+                android:text="@string/addrfq_button_deliverydetails"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tabsParent"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="-12dip"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
+
+            <LinearLayout
+                android:id="@+id/btnParent1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                >
+
+                <TextView
+                    android:id="@+id/TextView_contactTabCircle"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:background="@drawable/addrfq_yellow_circle"
+                    android:gravity="center"
+                    android:text="1 "
+                    android:textColor="@color/white"
+                    android:textSize="10dip"
+                    android:paddingBottom="2dip"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnParent2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom" >
+
+                <TextView
+                    android:id="@+id/TextView_itemsTabCircle"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:background="@drawable/addrfq_blue_circle"
+                    android:gravity="center"
+                    android:paddingRight="1dip"
+                    android:text="2 "
+                    android:textColor="@color/white"
+                    android:textSize="10dip"
+                    android:paddingBottom="2dip"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnParent3"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom" >
+
+                <TextView
+                    android:id="@+id/TextView_deliveryTabCircle"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:background="@drawable/addrfq_yellow_circle"
+                    android:gravity="center"
+                    android:paddingRight="1dip"
+                    android:text="3 "
+                    android:textColor="@color/white"
+                    android:textSize="10dip"
+                    android:paddingBottom="2dip"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewFlipperParent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/tabsParent"
+            android:orientation="vertical"
+            android:layout_marginTop="12dip"
+            >
+
+            <ViewFlipper
+                android:id="@+id/view_flipper"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <include layout="@layout/add_rfq_contact_details_tab_layout" />
+
+                <include layout="@layout/add_rfq_item_details_tab_layout" />
+
+                <include layout="@layout/add_rfq_delivery_details_tab_layout" />
+
+            </ViewFlipper>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

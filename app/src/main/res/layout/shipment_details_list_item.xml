@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingLeft="16dip"
+    android:paddingRight="16dip"
+    android:paddingBottom="20dip"
+    android:paddingTop="20dip">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_shipmentDetails_orders"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_alignParentTop="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/TextView_shipmentDetails_orderId_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shipment_details_list_item_orderid_label"
+                style="@style/p2s_36_black_bold"
+                />
+            <TextView
+                android:id="@+id/TextView_shipmentDetails_orderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/p2s_36_orange_normal"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/TextView_shipmentDetails_orderDate_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shipment_details_list_item_orderDate_label"
+                style="@style/p2s_36_black_bold"/>
+            <TextView
+                android:id="@+id/TextView_shipmentDetails_orderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/p2s_36_orange_normal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextView_shipmentDetails_TruckLabel"
+        android:layout_below="@+id/LinearLayout_shipmentDetails_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Truck Information"
+        style="@style/p2s_46_black_bold"
+        android:layout_marginTop="@dimen/layout_mini_margin"/>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_shipmentDetails_Location"
+        android:layout_below="@id/TextView_shipmentDetails_TruckLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/layout_mini_margin">
+        <TextView
+            android:id="@+id/TextView_shipmentDetails_currentLocation_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shipment_details_list_item_currentLocation_label"
+            style="@style/p2s_36_black_bold"/>
+        <TextView
+            android:id="@+id/TextView_shipmentDetails_currentLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/p2s_36_gray_normal"
+            android:layout_gravity="left"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_shipmentDetails_shipment"
+        android:layout_below="@id/LinearLayout_shipmentDetails_Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/layout_mini_margin">
+        <TextView
+            android:id="@+id/TextView_shipmentDetails_shipment_startDate_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shipment_details_list_item_shipment_startDate_label"
+            style="@style/p2s_30_black_bold"/>
+        <TextView
+            android:id="@+id/TextView_shipmentDetails_shipment_startDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/p2s_30_gray_normal"
+            android:layout_gravity="left"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_shipmentDetails_Estimated_Distance"
+        android:layout_below="@id/LinearLayout_shipmentDetails_shipment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/layout_mini_margin">
+        <TextView
+            android:id="@+id/TextView_shipmentDetails_shipment_estimated_distance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shipment_details_list_item_shipment_estimatedDistance_label"
+            style="@style/p2s_30_black_bold"
+            />
+        <TextView
+            android:id="@+id/TextView_shipmentDetails_shipment_estimated_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/p2s_30_gray_normal"
+            android:layout_gravity="left"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/LinearLayout_shipmentDetails_Estimated_Distance"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/layout_mini_margin"
+            >
+            <View
+                android:background="@color/rfq_link_color"
+                android:layout_width = "match_parent"
+                android:layout_height="1dip"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:weightSum="2">
+                <View
+                    android:background="@color/rfq_link_color"
+                    android:layout_width = "1px"
+                    android:layout_height="match_parent"
+                    />
+                <LinearLayout
+                    android:id="@+id/LinearLayout_shipmentDetails_Materials_rootView"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:text="Material Loaded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/p2s_30_black_bold"
+                        android:padding="5dp"
+                        android:gravity="center"/>
+                    <View
+                        android:background="@color/rfq_link_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px">
+
+                    </View>
+                    </LinearLayout>
+                <View
+                    android:background="@color/rfq_link_color"
+                    android:layout_width = "1dip"
+                    android:layout_height="match_parent"
+                    />
+                <LinearLayout
+                    android:id="@+id/LinearLayout_shipmentDetails_Quantity_rootView"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:text="Quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/p2s_30_black_bold"
+                        android:padding="5dp"
+                        android:gravity="center"/>
+                    <View
+                        android:background="@color/rfq_link_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"></View>
+                </LinearLayout>
+                <View
+                    android:background="@color/rfq_link_color"
+                    android:layout_width = "1dip"
+                    android:layout_height="match_parent"
+                    />
+            </LinearLayout>
+
+
+
+            <View
+                android:background="@color/rfq_link_color"
+                android:layout_width = "match_parent"
+                android:layout_height="1dip"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/Button_shipmentDetails_locate_on_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/layout_mini_margin"
+            android:paddingBottom="@dimen/layout_mini_margin"
+            android:paddingLeft="@dimen/space_between_two_vertical_component"
+            android:paddingRight="@dimen/space_between_two_vertical_component"
+            android:layout_marginLeft="10dip"
+            android:background="@color/NewBlue"
+            android:textColor="@color/white"
+            android:layout_gravity="bottom"
+
+
+            android:clickable="true">
+
+            <TextView
+                android:text="Locate"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/p2s_24px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:text="ON MAP"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/p2s_36px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contactParentScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/page_bottom_padding"
+        android:paddingLeft="@dimen/page_left_padding"
+        android:paddingRight="@dimen/page_right_padding"
+        android:paddingTop="@dimen/page_top_padding" >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TextInputLayout_companyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/EditText_companyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/addrfq_hint_companyname"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TextInputLayout_fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/EditText_fullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/addrfq_hint_fullname"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/space_between_two_vertical_component"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TextInputLayout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/EditText_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/addrfq_hint_emailid"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/space_between_two_vertical_component"
+                android:completionThreshold="1"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TextInputLayout_mobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/EditText_mobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/addrfq_hint_mobilenumber"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/space_between_two_vertical_component"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_emptyViewParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/TextView_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Style_TextView_body1"
+            android:layout_marginLeft="@dimen/page_left_padding"
+            android:layout_marginRight="@dimen/page_right_padding"
+            android:layout_marginTop="@dimen/page_top_padding"
+            android:layout_marginBottom="@dimen/page_bottom_padding"
+            android:textSize="25dip"
+            android:gravity="center"
+            />
+
+        <Button
+            android:id="@+id/Button_getAQuote"
+            style="@style/Style_Button_SquareYellow"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/home_button_request_a_quote"
+            android:layout_marginLeft="@dimen/page_left_padding"
+            android:layout_marginRight="@dimen/page_right_padding"/>
+    </LinearLayout>
+</LinearLayout>

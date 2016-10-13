@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:id="@+id/TextView_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Style_TextView_body1"
+        android:layout_marginLeft="@dimen/page_left_padding"
+        android:layout_marginRight="@dimen/page_right_padding"
+        android:layout_marginTop="@dimen/page_top_padding"
+        android:layout_marginBottom="@dimen/page_bottom_padding"
+        android:textSize="25dip"
+        android:gravity="center"
+        android:text="@string/customers_not_found"/>
+</LinearLayout>

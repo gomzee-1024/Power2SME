@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/NestedScrollView_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_gravity="fill_vertical"
+    app:layout_behavior="com.power2sme.android.utilities.customviews.PatchedScrollingViewBehavior"
+    android:background="@color/colorWhite">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/page_right_padding"
+        android:paddingLeft="@dimen/page_right_padding"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/contactUsHeading"
+            style="@style/Style_TextView_Subhead1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contactus_page_heading"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/page_top_padding"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/page_top_padding"
+
+            >
+
+            <TextView
+                style="@style/Style_TextView_body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name : "
+                />
+
+            <TextView
+                android:id="@+id/TextView_name"
+                style="@style/Style_TextView_body1_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mr. Hello Sign"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/page_top_padding"
+            >
+            <TextView
+                style="@style/Style_TextView_body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email    : "
+                />
+
+            <TextView
+                android:id="@+id/TextView_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/accent1"
+                android:gravity="left|center_vertical"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/page_top_padding"
+            >
+            <TextView
+                style="@style/Style_TextView_body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile : "
+                android:autoLink="phone"
+                />
+
+            <TextView
+                android:id="@+id/TextView_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/accent1"
+                android:gravity="left|center_vertical"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
