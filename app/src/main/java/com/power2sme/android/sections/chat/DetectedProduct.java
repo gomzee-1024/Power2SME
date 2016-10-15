@@ -10,7 +10,7 @@ public class DetectedProduct {
     public boolean creditPayment=false;
     public int creditDays=-1;
     public int pincode;
-    public Double qty;
+    public Double qty=0.0;
     public String taxPref;
     public String skuCode;
     public String price;

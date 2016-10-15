@@ -121,6 +121,6 @@
 	<color name="colorPrimary1">#00BCD4</color>
 	<color name="colorPrimaryDark1">#0097A7</color>
 	<color name="colorAccent1">#009688</color>
-	<color name="myChatColor">#3F51B5</color>
+	<color name="myChatColor">#0277BD</color>
 	<color name="clientChatColor">#00BCD4</color>
 </resources>

@@ -1,12 +1,14 @@
 package com.power2sme.android.sections.chat;
 
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by sysadmin on 12/10/16.
  */
 public class CardRequest {
-    private List<String> skucodeList;
+    private LinkedHashSet<String> skucodeList;
     private int noOfCardsToDisplay;
     private int pincode;
     private int creditDays;
@@ -43,10 +45,10 @@ public class CardRequest {
     public void setNoOfCardsToDisplay(int noOfCardsToDisplay) {
         this.noOfCardsToDisplay = noOfCardsToDisplay;
     }
-    public List<String> getSkucodeList() {
+    public LinkedHashSet<String> getSkucodeList() {
         return skucodeList;
     }
-    public void setSkucodeList(List<String> skucodeList) {
+    public void setSkucodeList(LinkedHashSet<String> skucodeList) {
         this.skucodeList = skucodeList;
     }
 }

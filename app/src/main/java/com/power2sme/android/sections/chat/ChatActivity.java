@@ -18,6 +18,7 @@ import android.widget.ProgressBar;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer;
 import com.power2sme.android.ContainerActivity;
 import com.power2sme.android.MyAccountApplication;
 import com.power2sme.android.ProgressTypes;
@@ -42,6 +43,8 @@ import com.power2sme.android.utilities.logging.UIMessage;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
+
 import com.android.volley.VolleyError;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -52,7 +55,11 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by shubhamkansal on 9/19/16.
@@ -73,13 +80,15 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
     private boolean pin_ans = false;
     private boolean qty_ans = false;
     private ChatRViewAdapter chatRViewAdapter;
-    private List<String> skucodes = new ArrayList<String>();
+    private LinkedHashSet<String> skucodes = new LinkedHashSet<>();
     private int chatid;
     private ObjectMapper mapper = new ObjectMapper();
     private String smeid, phone, email;
     private MyAccountApplication app;
     //private String apiPrefix = "http://192.168.0.175:8080";
-    private String apiPrefix = "http://uat.power2sme.com";
+    private String apiPrefix = "http://192.168.0.175:8080";
+    private String skuApiPrefix = "http://192.168.1.142:9090";
+    private StringBuilder recordedWords = new StringBuilder("");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,7 +135,8 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
 
             @Override
             public void onError(VolleyError error) {
-
+                android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(ChatActivity.this);
+                builder.setMessage("Due to network issues we are not able to communicate, you will get a call from us shortly").show();
             }
         });
     }
@@ -225,6 +235,7 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
 
     private void showResponse(JSONObject result) throws JSONException {
         final int responseNo;
+        recordedWords.append(result.getString("recordedWords"));
         JSONObject dp1 = result.getJSONObject("detectedProduct");
         if (!dp1.getString("category").equalsIgnoreCase("null")) {
             dp.category = dp1.getString("category");
@@ -266,21 +277,22 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
             String url;
             if (dp.category.equalsIgnoreCase("aluminium")) {
                 if (dp.brand != null) {
-                    url = "http://uat.power2sme.com/p2sapi/ws/v3/skuList?" + "category=" + dp.category
+                    url = skuApiPrefix+"/p2sapi/ws/v3/skuList?" + "category=" + dp.category
                             + "&subcategory=" + dp.category + "+" + dp.subCategory.replace("-", "+") +
-                            "&brand=" + dp.brand;
+                            "&brand=" + dp.brand+"&longdesc="+recordedWords.toString();
                 } else {
-                    url = "http://uat.power2sme.com/p2sapi/ws/v3/skuList?" + "category=" + dp.category
-                            + "&subcategory=" + dp.category + "+" + dp.subCategory.replace("-", "+");
+                    url = skuApiPrefix+"/p2sapi/ws/v3/skuList?" + "category=" + dp.category
+                            + "&subcategory=" + dp.category + "+" + dp.subCategory.replace("-", "+") +
+                            "&longdesc="+recordedWords.toString();
                 }
             } else {
                 if (dp.brand != null) {
-                    url = "http://uat.power2sme.com/p2sapi/ws/v3/skuList?" + "category=" + dp.category
+                    url = skuApiPrefix+"/p2sapi/ws/v3/skuList?" + "category=" + dp.category
                             + "&subcategory=" + dp.subCategory.replace("-", "+") +
-                            "&brand=" + dp.brand;
+                            "&brand=" + dp.brand+"&longdesc="+recordedWords.toString();
                 } else {
-                    url = "http://uat.power2sme.com/p2sapi/ws/v3/skuList?" + "category=" + dp.category
-                            + "&subcategory=" + dp.subCategory.replace("-", "+");
+                    url = skuApiPrefix+"/p2sapi/ws/v3/skuList?" + "category=" + dp.category
+                            + "&subcategory=" + dp.subCategory.replace("-", "+")+"&longdesc="+recordedWords.toString();
                 }
             }
             Log.d("NOW", "showResponse: " + url);
@@ -315,72 +327,9 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
                                 e.printStackTrace();
                             }
                         }
-                        String url = apiPrefix+"/chatapi/cards";
                         //String url = "http://192.168.1.142:9090/chatapi/cards";
-                        //String url = "http://uat.power2sme.com/chatapi/cards";
-                        final CardRequest cardRequest = new CardRequest();
-                        cardRequest.setSkucodeList(skucodes);
-                        cardRequest.setCreditDays(dp.creditDays);
-                        cardRequest.setNoOfCardsToDisplay(5);
-                        cardRequest.setPincode(dp.pincode);
-                        cardRequest.setQuantity(dp.qty);
-                        cardRequest.setSmeid(smeid);
-                        RequestDto requestDto = new RequestDto();
-                        requestDto.setCardRequest(cardRequest);
-                        String requestBody=null;
-                        try {
-                            requestBody = mapper.writeValueAsString(requestDto);
-                        } catch (JsonProcessingException e) {
-                            e.printStackTrace();
-                        }
-                        apiRequestObj.sendJsonRequest(url, requestBody, new ApiRequest.SyntaxnetCallback() {
-                            @Override
-                            public void onSuccess(JSONObject result) {
-                                CardsResponse cardsResponse = null;
-                                String cardResponseString = null;
-                                try {
-                                    cardResponseString = result.getJSONObject("cardResponse").toString();
-                                    cardsResponse = mapper.readValue(cardResponseString,CardsResponse.class);
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                } catch (JsonParseException e) {
-                                    e.printStackTrace();
-                                } catch (JsonMappingException e) {
-                                    e.printStackTrace();
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                                if(cardsResponse.getTotalRecords()==0){
-                                    generateChatMessageWithDelay("Sorry your product is not currently available at your location \nPlease try different location or change your product requirement",false,true,0);
-                                    dp.category = null;
-                                    dp.subCategory = null;
-                                    dp.brand = null;
-                                }else {
-                                    int x;
-                                    int position = chatRViewAdapter.getItemCount() - 1;
-                                    ChatRViewAdapter.RecyclerItemHolder holder = (ChatRViewAdapter.RecyclerItemHolder) chat_rview.findViewHolderForAdapterPosition(position);
-                                    holder.ptext.setText("These are the products which we have at your location currently");
-                                    List<CardsInfo> cardsInfoList = cardsResponse.getCardsInfo();
-                                    for (x = 0; x < cardsInfoList.size(); ++x) {
-                                        ProductListItem p = new ProductListItem();
-                                        p.setProduct_name(cardsInfoList.get(x).getLongdescription());
-                                        p.setSku_code(cardsInfoList.get(x).getSkucode());
-                                        p.setPrices(cardsInfoList.get(x).getPrice());
-                                        p.setLocations(cardsInfoList.get(x).getLocation());
-                                        p.setProd(dp);
-                                        holder.adapter.addProduct(p);
-                                    }
-                                }
-                            }
-
-                            @Override
-                            public void onError(VolleyError error) {
-                                    //generateChatMessageWithDelay("Due to network issue we were not able to show product, you will get a call from us shortly",false,true,0);
-                                chatRViewAdapter.removeLastObject();
-                                android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(ChatActivity.this);
-                                builder.setMessage("Due to network issues we are not able to communicate, you will get a call from us shortly").show();
-                            }
-                        });
+                        //String url = skuApiPrefix+"/chatapi/cards";
+                        sendCardRequest(false);
                         //final ArrayList<ProductListItem> productlist = new ArrayList<ProductListItem>();
                         //ProductList prolist = new ProductList(productlist);
                         //prolist.setMessage("Please wait while we find product list for you");
@@ -389,7 +338,7 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
                         //generateChatMessageWithDelay("Please wait while we find product list for you",false,true,0);
                         //sendForDealsDataByLocation(count, skucodes, 0);
                         /*for (int i = 0; i < skucodes.size(); ++i) {
-                            String url1 = "http://uat.power2sme.com/p2sapi/ws/v3/dealsDataByLocation?sku=" + skucodes.get(i) + "&pincode=" + dp.pincode + "&smeid="+smeid;
+                            String url1 = skuApiPrefix+"/p2sapi/ws/v3/dealsDataByLocation?sku=" + skucodes.get(i) + "&pincode=" + dp.pincode + "&smeid="+smeid;
                             Log.d("Price", "url " + url1);
                             apiRequestObj.sendskuapirequest(url1, new ApiRequest.SkuApiCallback() {
                                 @Override
@@ -420,7 +369,7 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
                                                 p.setLocations(obj.getString("locationValue"));
                                                 p.setSku_code(sku);
                                                 p.setProd(dp);
-                                                String url2 = "http://uat.power2sme.com/p2sapi/ws/v3/getSkuPriceForSme?dealid=" + dealid + "&qty=" + dp.qty + "&creditdays=" + (dp.creditPayment ? dp.creditDays : 0) + "&skucode=" + sku + "&uomcode=" + uom + "&smeid=C00008";
+                                                String url2 = skuApiPrefix+"/p2sapi/ws/v3/getSkuPriceForSme?dealid=" + dealid + "&qty=" + dp.qty + "&creditdays=" + (dp.creditPayment ? dp.creditDays : 0) + "&skucode=" + sku + "&uomcode=" + uom + "&smeid=C00008";
 
                                                 apiRequestObj.sendskuapirequest(url2, new ApiRequest.SkuApiCallback() {
                                                     @Override
@@ -468,7 +417,6 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
                 @Override
                 public void onError(VolleyError error) {
                     //generateChatMessageWithDelay("Due to network issue, We will contact you later,Thank you",false,true,0);
-                    chatRViewAdapter.removeLastObject();
                     android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(ChatActivity.this);
                     builder.setMessage("Due to network issues we are not able to communicate, you will get a call from us shortly").show();
                 }
@@ -499,10 +447,98 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
         }
     }
 
+    private void sendCardRequest(final boolean scroll) {
+        final CardRequest cardRequest = new CardRequest();
+        String url = apiPrefix+"/chatapi/cards";
+        cardRequest.setSkucodeList(skucodes);
+        cardRequest.setCreditDays(dp.creditDays);
+        cardRequest.setNoOfCardsToDisplay(10);
+        cardRequest.setPincode(dp.pincode);
+        cardRequest.setQuantity(dp.qty);
+        cardRequest.setSmeid(smeid);
+        RequestDto requestDto = new RequestDto();
+        requestDto.setChatid(chatid);
+        requestDto.setCardRequest(cardRequest);
+        String requestBody=null;
+        try {
+            requestBody = mapper.writeValueAsString(requestDto);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        Log.d("response", "sendCardRequest: "+requestBody);
+        apiRequestObj.sendJsonRequest(url, requestBody, new ApiRequest.SyntaxnetCallback() {
+            @Override
+            public void onSuccess(JSONObject result) {
+                CardsResponse cardsResponse = null;
+                String cardResponseString = null;
+                try {
+                    cardResponseString = result.getJSONObject("cardResponse").toString();
+                    cardsResponse = mapper.readValue(cardResponseString,CardsResponse.class);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (JsonParseException e) {
+                    e.printStackTrace();
+                } catch (JsonMappingException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if(cardsResponse.getTotalRecords()==0){
+                    if(!scroll) {
+                        generateChatMessageWithDelay("Sorry your product is not currently available at your location \nPlease try different location or change your product requirement", false, true, 0);
+                        dp = new DetectedProduct();
+                    }else{
+                        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(ChatActivity.this);
+                        builder.setMessage("No more products prices are available right now, Please specify different requirement or raise an rfq by pressing yes and soon you will get a call from us to meet your requirement").setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                placeRfq("","");
+                            }
+                        }).setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        }).show();
+                    }
+                }else {
+                    int x;
+                    int position = chatRViewAdapter.getItemCount() - 1;
+                    Collection<String> removeSkus = cardsResponse.getProcessedSkus();
+                    skucodes.removeAll(removeSkus);
+                    ChatRViewAdapter.RecyclerItemHolder holder = (ChatRViewAdapter.RecyclerItemHolder) chat_rview.findViewHolderForAdapterPosition(position);
+                    holder.ptext.setText("These are the products which we have at your location currently");
+                    int pos = holder.adapter.getItemCount();
+                    List<CardsInfo> cardsInfoList = cardsResponse.getCardsInfo();
+                    for (x = 0; x < cardsInfoList.size(); ++x) {
+                        ProductListItem p = new ProductListItem();
+                        p.setProduct_name(cardsInfoList.get(x).getLongdescription());
+                        p.setSku_code(cardsInfoList.get(x).getSkucode());
+                        p.setPrices(cardsInfoList.get(x).getPrice());
+                        p.setLocations(cardsInfoList.get(x).getLocation());
+                        p.setProd(dp);
+                        holder.adapter.addProduct(p);
+                    }
+                    if(scroll){
+                        holder.child.scrollToPosition(pos);
+                    }
+                    holder.adapter.addProduct("button");
+                }
+            }
+
+            @Override
+            public void onError(VolleyError error) {
+                //generateChatMessageWithDelay("Due to network issue we were not able to show product, you will get a call from us shortly",false,true,0);
+                android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(ChatActivity.this);
+                builder.setMessage("Due to network issues we are not able to communicate, you will get a call from us shortly").show();
+            }
+        });
+    }
+
     private void sendForDealsDataByLocation(final Count count, final List<String> skucodes, final int i) {
         Log.d("response", "sendForDealsDataByLocation: "+ i);
         for(int j=i;j<skucodes.size() && j<(i+3) && count.getDealsfound()<5;++j) {
-            String url1 = "http://uat.power2sme.com/p2sapi/ws/v3/dealsDataByLocation?sku=" + skucodes.get(j) + "&pincode=" + dp.pincode + "&smeid=" + smeid;
+            String url1 = skuApiPrefix+"/p2sapi/ws/v3/dealsDataByLocation?sku=" + skucodes.get(j) + "&pincode=" + dp.pincode + "&smeid=" + smeid;
             Log.d("Price", "url " + url1);
             apiRequestObj.sendskuapirequest(url1, new ApiRequest.SkuApiCallback() {
                 @Override
@@ -535,7 +571,7 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
                             p.setLocations(obj.getString("locationValue"));
                             p.setSku_code(sku);
                             p.setProd(dp);
-                            String url2 = "http://uat.power2sme.com/p2sapi/ws/v3/getSkuPriceForSme?dealid=" + dealid + "&qty=" + dp.qty + "&creditdays=" + (dp.creditPayment ? dp.creditDays : 0) + "&skucode=" + sku + "&uomcode=" + uom + "&smeid=C00008";
+                            String url2 = skuApiPrefix+"/p2sapi/ws/v3/getSkuPriceForSme?dealid=" + dealid + "&qty=" + dp.qty + "&creditdays=" + (dp.creditPayment ? dp.creditDays : 0) + "&skucode=" + sku + "&uomcode=" + uom + "&smeid=C00008";
 
                             apiRequestObj.sendskuapirequest(url2, new ApiRequest.SkuApiCallback() {
                                 @Override
@@ -696,25 +732,46 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
     }
 
     @Override
-    public void placeRfq(DetectedProduct product) {
-        dp.skuCode = product.skuCode;
+    public void loadmore() {
+        sendCardRequest(true);
+    }
+
+    @Override
+    public void placeRfq(String prodName,String skuCode) {
+        //dp.skuCode = product.skuCode;
 
         iAddRFQPresentor = new AddRFQPresentorImpl(this, this);
         NewRFQ_v3 newRFQ = new NewRFQ_v3();
         newRFQ.setObject_type_id("1");
 
-        Organization_v3 organization = getOrganizationPayloadEntity(product);
+        Organization_v3 organization = getOrganizationPayloadEntity(prodName,skuCode);
         organization.setLeadSource(LeadSource.Android_RFQ.toString());
         newRFQ.setOrganisation(organization);
 
-        Opportunity_v3 opportunity = getOpportunityPayloadEntity(product);
+        Opportunity_v3 opportunity = getOpportunityPayloadEntity(prodName,skuCode);
         opportunity.setLeadSource(LeadSource.Android_RFQ.toString());
         newRFQ.setOpportunity(opportunity);
 
         iAddRFQPresentor.addNewRFQ(newRFQ);
+        generateTypingResponce(1000);
+        generateChatMessageWithDelay("Thanks for placing order with us ,we were happy to help you",false,true,2000);
+        dp = new DetectedProduct();
     }
 
-    private Organization_v3 getOrganizationPayloadEntity(DetectedProduct product) {
+    @Override
+    public void onBackPressed() {
+
+        placeRfq("","");
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onDestroy() {
+        placeRfq("","");
+        super.onDestroy();
+    }
+
+    private Organization_v3 getOrganizationPayloadEntity(String prodName, String skuCode) {
         Organization_v3 organization = new Organization_v3();
         organization.setCompany_name("JOHN DOE TEST ORG");
         organization.setContactPerson("Dabangg");
@@ -723,24 +780,26 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
         organization.setShip_street(
                 "qatest93, New Delhi, Delhi, 110020, South West delhi, Delhi, 110022, , South Delhi, Delhi, 110049"
         );
-        organization.setShip_pincode("" + product.pincode);
+        organization.setShip_pincode("" + dp.pincode);
         organization.setShip_state("Delhi");
         organization.setShip_city("South Delhi");
         organization.setShippingAddressCode("SOU281");
         return organization;
     }
 
-    private Opportunity_v3 getOpportunityPayloadEntity(DetectedProduct prod) {
+    private Opportunity_v3 getOpportunityPayloadEntity(String prodName,String skuCode) {
         Opportunity_v3 opportunity = new Opportunity_v3();
-
-        if (prod.creditPayment) {
-            opportunity.setPaymentTermDays("" + prod.creditDays);
+        if (dp.creditPayment) {
+            opportunity.setPaymentTermDays("" + dp.creditDays);
         } else {
             opportunity.setPaymentTermDays("0");
         }
         TaxationPreference_v3 taxationPreference_v3 = new TaxationPreference_v3();
         taxationPreference_v3.setKey("1");
-        taxationPreference_v3.setValue(prod.taxPref.toUpperCase() + " Only");
+        if(dp.taxPref!=null)
+        taxationPreference_v3.setValue(dp.taxPref.toUpperCase() + " Only");
+        else
+        taxationPreference_v3.setValue("VAT Only");
         opportunity.setTaxationPref(taxationPreference_v3);
         Urgency_v3 urgency_v3 = new Urgency_v3();
         urgency_v3.setKey("1");
@@ -754,15 +813,16 @@ public class ChatActivity extends BaseAppCompatActivity implements IAddRFQView, 
 
 
         SKU_v3 sku = new SKU_v3();
-        sku.setCategory(prod.category);
-        sku.setSubcategory(prod.subCategory);
-        sku.setSkucode(prod.skuCode);
+        sku.setCategory(dp.category);
+        sku.setSubcategory(dp.subCategory);
+        sku.setSkucode(skuCode);
 
         newRFQItem.setSku(sku);
 
-        newRFQItem.setRemarks(prod.longDescription);
-        newRFQItem.setQuantity("" + prod.qty);
-        if (prod.category.equalsIgnoreCase("aluminium")) {
+        newRFQItem.setRemarks(prodName);
+        //Toast.makeText(this,prod.longDescription,Toast.LENGTH_LONG).show();
+        newRFQItem.setQuantity("" + dp.qty);
+        if (prodName.equalsIgnoreCase("aluminium")) {
             newRFQItem.setUom("Kilograms");
         } else {
             newRFQItem.setUom("Metric Tonnes");

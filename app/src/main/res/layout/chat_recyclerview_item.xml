@@ -9,11 +9,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="bottom">
         <LinearLayout
             android:id="@+id/first_view"
             android:layout_width="160dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
             android:background="@drawable/product_name_bg"
             android:padding="8dp"
             android:layout_marginBottom="4dp">
@@ -31,7 +33,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RS Deal Price"
+            android:text="Rs Deal Price"
             android:layout_marginLeft="4dp"
             android:textSize="12sp"
             android:textStyle="bold" />
@@ -97,7 +99,7 @@
         <Button
             android:id="@+id/confirm_button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="27dp"
             android:background="@android:color/holo_red_light"
             android:layout_margin="4dp"
             android:text="Confirm"
