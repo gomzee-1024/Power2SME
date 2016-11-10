@@ -7,7 +7,7 @@ import java.util.List;
  * Created by sysadmin on 16/9/16.
  */
 public class ProductList {
-    ArrayList<ProductListItem> list;
+    ArrayList<Object> list;
 
     String message;
 
@@ -19,12 +19,15 @@ public class ProductList {
         this.message = message;
     }
 
+    public void addToList(ProductListItem p ){
+        list.add(p);
+    }
 
-    public ProductList(ArrayList<ProductListItem> list){
+    public ProductList(ArrayList<Object> list){
         this.list = list;
     }
 
-    public List<ProductListItem> getList() {
+    public List<Object> getList() {
         return list;
     }
 }

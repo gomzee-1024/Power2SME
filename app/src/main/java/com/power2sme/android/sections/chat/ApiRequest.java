@@ -60,7 +60,7 @@ public class ApiRequest {
                 return headers;
             }*/
         };
-        jsonObjReq.setRetryPolicy(new DefaultRetryPolicy(30*1000,0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        jsonObjReq.setRetryPolicy(new DefaultRetryPolicy(90*1000,0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         // Adding request to request queue
         MyAccountApplication.getInstance().addToRequestQueue(jsonObjReq, tag_json_obj);
     }
@@ -97,7 +97,7 @@ public class ApiRequest {
                 return headers;
             }
         };
-        jsonObjReq.setRetryPolicy(new DefaultRetryPolicy(20*1000,0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        jsonObjReq.setRetryPolicy(new DefaultRetryPolicy(90*1000,0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         MyAccountApplication.getInstance().addToRequestQueue(jsonObjReq, tag_json_obj);
     }
 
@@ -131,7 +131,7 @@ public class ApiRequest {
                 return headers;
             }
         };
-        jsonObjReq.setRetryPolicy(new DefaultRetryPolicy(10*1000,0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        jsonObjReq.setRetryPolicy(new DefaultRetryPolicy(90*1000,0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         MyAccountApplication.getInstance().addToRequestQueue(jsonObjReq, tag_json_obj);
     }
 

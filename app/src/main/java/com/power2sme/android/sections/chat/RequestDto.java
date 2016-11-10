@@ -13,12 +13,20 @@ public class RequestDto {
     private boolean numans;
     private boolean pin_ans;
     private boolean qtyans;
+    private boolean creditans;
     private String smeid;
     private String email;
     private String phone;
     private int chatid;
     private CardRequest cardRequest;
 
+    public boolean isCreditans() {
+        return creditans;
+    }
+
+    public void setCreditans(boolean creditans) {
+        this.creditans = creditans;
+    }
     public CardRequest getCardRequest() {
         return cardRequest;
     }

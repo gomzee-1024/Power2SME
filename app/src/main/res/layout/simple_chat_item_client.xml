@@ -13,6 +13,7 @@
         android:id="@+id/simple_item_textview_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxWidth="240dp"
         android:text="Hello,How may I help you?"
         android:background="@drawable/my_chat_text_bg"
         android:textColor="@android:color/white"

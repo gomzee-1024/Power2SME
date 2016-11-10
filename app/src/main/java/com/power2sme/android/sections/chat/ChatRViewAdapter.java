@@ -35,10 +35,11 @@ public class ChatRViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     private Context context;
     private boolean loading = false;
     private int previousTotal;
-
+    private ArrayList<Integer> previousPos = new ArrayList<>();
     public ChatRViewAdapter(Context context, ArrayList<Object> list) {
         this.context = context;
         this.list = list;
+        previousPos.add(0);
     }
 
     @Override
@@ -110,6 +111,7 @@ public class ChatRViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 R.layout.list_view_row_item, R.id.label, listChatItem.getList());
         v2.listview.setAdapter(adapter);
         final int pos = position;
+        v2.clicked=false;
         v2.listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -122,26 +124,26 @@ public class ChatRViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 }
             }
         });
-        Drawable drawable = context.getResources().getDrawable(R.drawable.my_chat_text_bg);
-        v2.ptext.setBackground(drawable);
-        int contentHeight = ((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, context.getResources().getDisplayMetrics())) * (v2.listview.getCount());
+        int contentHeight = ((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 32, context.getResources().getDisplayMetrics())) * (v2.listview.getCount());
         ViewGroup.LayoutParams lp = v2.listview.getLayoutParams();
         lp.height = contentHeight;
         v2.listview.setLayoutParams(lp);
     }
 
-    private void configurev3(final RecyclerItemHolder v3, int position) {
+    private void configurev3(final RecyclerItemHolder v3, final int position) {
         Log.d("response", "configurev3: ");
+        v3.list1.clear();
         ProductList productlist = (ProductList) list.get(position);
         for (int i = 0; i < productlist.list.size(); ++i) {
             v3.list1.add(productlist.list.get(i));
+            Log.d("response", "configurev3: "+"adding product");
         }
-        v3.ptext.setText(productlist.getMessage());
-        Drawable drawable = context.getResources().getDrawable(R.drawable.my_chat_text_bg);
-        v3.ptext.setBackground(drawable);
         v3.adapter = new ChildRViewAdapter(context, v3.list1);
         v3.child.setLayoutManager(v3.horizontalLayout);
         v3.child.setAdapter(v3.adapter);
+        v3.ptext.setText(productlist.getMessage());
+        Log.d("response", "configurev3: "+"position " + position);
+        Log.d("response", "configurev3: "+productlist.list.size());
         previousTotal = getItemCount();
         v3.child.setOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -162,24 +164,28 @@ public class ChatRViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 Log.d("response", "firstvisibleitemcount " + firstVisibleItemIndex);
                 Log.d("response", "loading " + loading);
                 //synchronizew loading state when item count changes
-                if (loading) {
-                    if (totalItemCount > previousTotal) {
-                        loading = false;
-                        previousTotal = totalItemCount;
+                Log.d("position", "onScrolled: "+position);
+                if(!previousPos.contains(position)) {
+                    if (loading) {
+                        if (totalItemCount > previousTotal) {
+                            loading = false;
+                            previousTotal = totalItemCount;
+                        } else if (firstVisibleItemIndex == 0) {
+                            // top of list reached
+                            // if you start loading
+                            loading = false;
+                        }
                     }
-                }
-                if (!loading) {
-                    if ((totalItemCount - visibleItemCount) <= firstVisibleItemIndex) {
-                        // Loading NOT in progress and end of list has been reached
-                        // also triggered if not enough items to fill the screen
-                        // if you start loading
-                        Log.d("response", "onScrolled: " + "loading");
-                        ((ChatActivity) context).loadmore();
-                        loading = true;
-                    } else if (firstVisibleItemIndex == 0) {
-                        // top of list reached
-                        // if you start loading
-                        //loading = true;
+                    if (!loading) {
+                        if ((totalItemCount - visibleItemCount) <= firstVisibleItemIndex) {
+                            // Loading NOT in progress and end of list has been reached
+                            // also triggered if not enough items to fill the screen
+                            // if you start loading
+                            Log.d("response", "onScrolled: " + "loading");
+                            ((ChatActivity) context).loadmore();
+                            loading = true;
+                            previousPos.add(position);
+                        }
                     }
                 }
             }
@@ -209,14 +215,14 @@ public class ChatRViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     public void addMsg(SimpleChatItem simpleChatItem) {
         list.add(simpleChatItem);
-        notifyItemInserted(list.size());
+        notifyItemInserted(list.size()-1);
     }
 
     public void refreshlastmsg(SimpleChatItem simpleChatItem) {
         list.remove(list.size() - 1);
         notifyItemRemoved(list.size());
         list.add(simpleChatItem);
-        notifyItemInserted(list.size());
+        notifyItemInserted(list.size()-1);
     }
 
     public void removeLastObject() {
@@ -228,14 +234,24 @@ public class ChatRViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         list.remove(list.size() - 1);
         notifyItemRemoved(list.size());
         list.add(listChatItem);
-        notifyItemInserted(list.size());
+        notifyItemInserted(list.size()-1);
     }
 
     public void refreshlastmsg(ProductList productList) {
         list.remove(list.size() - 1);
         notifyItemRemoved(list.size());
         list.add(productList);
-        notifyItemInserted(list.size());
+        notifyItemInserted(list.size()-1);
+    }
+
+    public void addProductList(ProductList productList) {
+        list.add(productList);
+        notifyItemInserted(list.size()-1);
+    }
+
+    public void addToChildRecyclerView(ProductListItem item , int pos){
+        ((ProductList)list.get(pos)).addToList(item);
+        notifyItemChanged(pos);
     }
 
     class SimpleItemHolder extends RecyclerView.ViewHolder {
@@ -279,7 +295,7 @@ public class ChatRViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     class RecyclerItemHolder extends RecyclerView.ViewHolder {
         RecyclerView child;
         LinearLayoutManager horizontalLayout;
-        ArrayList<Object> list1 = new ArrayList<Object>();
+        ArrayList<Object> list1 = new ArrayList<>();
         ChildRViewAdapter adapter;
         TextView ptext;
 

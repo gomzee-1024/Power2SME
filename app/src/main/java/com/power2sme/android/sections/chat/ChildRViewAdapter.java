@@ -77,6 +77,7 @@ public class ChildRViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     @Override
     public int getItemViewType(int position) {
         if(list.get(position) instanceof ProductListItem){
+            Log.d("response", "getItemViewType: "+"SIMPLE_CARD");
             return SIMPLE_CARD;
         }
         else{
@@ -86,11 +87,12 @@ public class ChildRViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     public void addProduct(ProductListItem p){
         list.add(p);
-        notifyItemInserted(list.size());
+        notifyItemInserted(list.size()-1);
+        Log.d("response", "addProduct: ");
     }
     public void addProduct(String p){
         list.add(p);
-        notifyItemInserted(list.size());
+        notifyItemInserted(list.size()-1);
     }
 
     public void removeLastObject(){
@@ -101,6 +103,11 @@ public class ChildRViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     @Override
     public int getItemCount() {
         return list.size();
+    }
+
+    public void clear() {
+        list.clear();
+        notifyDataSetChanged();
     }
 
     public static class CardViewHolder extends RecyclerView.ViewHolder{
